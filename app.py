@@ -180,6 +180,11 @@ def identify_protein_cavities(pdbqt_file, max_pockets=3):
     return pockets[:max_pockets]
 
 def compute_protein_bounding_box(pdbqt_file):
+    """
+    CRITICAL FIX: Removed the 60 Angstrom clamp and allowed scaling up to 126 Angstroms.
+    This prevents positive binding energies during Blind Docking by ensuring the box
+    actually covers the entire protein surface rather than trapping the ligand inside the core.
+    """
     if not os.path.exists(pdbqt_file): return 0, 0, 0, 20, 20, 20
     coords = []
     with open(pdbqt_file, 'r') as f:
@@ -192,7 +197,7 @@ def compute_protein_bounding_box(pdbqt_file):
     min_c, max_c = coords.min(axis=0), coords.max(axis=0)
     center = (min_c + max_c) / 2.0
     size = (max_c - min_c) + 15.0
-    return center[0], center[1], center[2], min(60.0, size[0]), min(60.0, size[1]), min(60.0, size[2])
+    return center[0], center[1], center[2], min(126.0, size[0]), min(126.0, size[1]), min(126.0, size[2])
 
 def convert_pdb_to_pdbqt(input_pdb, output_pdbqt="protein.pdbqt", is_ligand=False, allowed_heteroatoms=None):
     if allowed_heteroatoms is None: allowed_heteroatoms = []
@@ -476,7 +481,6 @@ def generate_ayurvedic_card(data, is_streamlit=True):
     bg_color = "#f4fcf7" if is_streamlit else "#ecfdf5"
     border_color = "#2e7d32" if is_streamlit else "#10b981"
     
-    # Safely get data fields with fallbacks since JSON DB is streamlined
     shloka = data.get('Sanskrit Shloka', 'Classical textual reference mapped in expanded database.')
     meaning = data.get('Classical Karma (Action)', 'Targets established bio-pathways according to standard texts.')
     
@@ -572,6 +576,15 @@ with col_params:
         st.markdown(generate_ayurvedic_card(st.session_state.selected_tree_data, is_streamlit=True), unsafe_allow_html=True)
 
     st.subheader("Step 2: Smart Cavity Configurator")
+    
+    if st.button("🌐 Enable Blind Docking (Full Protein Surface)", use_container_width=True):
+        if st.session_state.target_ready and os.path.exists("protein.pdbqt"):
+            bcx, bcy, bcz, bsx, bsy, bsz = compute_protein_bounding_box("protein.pdbqt")
+            st.session_state.cx, st.session_state.cy, st.session_state.cz = round(bcx, 1), round(bcy, 1), round(bcz, 1)
+            st.session_state.sx, st.session_state.sy, st.session_state.sz = int(bsx), int(bsy), int(bsz)
+            st.success("Grid box dynamically expanded to cover the entire macromolecule!")
+            trigger_rerun = True
+            
     if st.session_state.target_ready and os.path.exists("protein.pdbqt"):
         if st.button("🔍 Scan Receptor Surface for Core Pockets", use_container_width=True):
             with st.spinner("Analyzing macromolecular spatial curvature dynamics..."):
@@ -591,9 +604,9 @@ with col_params:
     grid_cx = st.number_input("Center X", value=float(st.session_state.cx), step=1.0)
     grid_cy = st.number_input("Center Y", value=float(st.session_state.cy), step=1.0)
     grid_cz = st.number_input("Center Z", value=float(st.session_state.cz), step=1.0)
-    grid_sx = st.slider("Size X", 10, 60, int(st.session_state.sx))
-    grid_sy = st.slider("Size Y", 10, 60, int(st.session_state.sy))
-    grid_sz = st.slider("Size Z", 10, 60, int(st.session_state.sz))
+    grid_sx = st.slider("Size X", 10, 126, int(st.session_state.sx))
+    grid_sy = st.slider("Size Y", 10, 126, int(st.session_state.sy))
+    grid_sz = st.slider("Size Z", 10, 126, int(st.session_state.sz))
     
     can_dock = bool(st.session_state.target_ready and st.session_state.ligand_ready)
     run_btn = st.button("🚀 Initialize Baseline Docking Algorithm", type="primary", disabled=not can_dock)
@@ -618,6 +631,12 @@ with col_visual:
                 pose_affinity_score = get_pose_affinity(st.session_state.docking_results_raw, selected_pose)
                 st.session_state.baseline_affinity = pose_affinity_score
                 
+                # --- NEW WARNING LOGIC FOR POSITIVE ENERGY ---
+                try:
+                    if float(pose_affinity_score) > 0:
+                        st.error("🚨 **CRITICAL WARNING:** AutoDock Vina returned a **POSITIVE binding affinity**. This means the molecule is experiencing severe steric clashes (crashing into solid protein walls). Your Grid Box is likely too small or placed incorrectly. Expand the Grid Box Size or select a different cavity before proceeding.")
+                except: pass
+
                 pre_uff, post_uff, delta_uff = execute_uff_complex_minimization("protein.pdbqt", parsed_poses[selected_pose])
                 active_interactions = compute_spatial_interactions("protein.pdbqt", parsed_poses[selected_pose])
 
@@ -785,6 +804,12 @@ if st.session_state.get('selected_analog_smiles') and st.session_state.docking_r
         new_aff_str = get_pose_affinity(st.session_state.redesign_docking_results_raw, 1)
         orig_aff_str = st.session_state.baseline_affinity
         
+        # --- NEW WARNING LOGIC FOR POSITIVE ENERGY IN PHASE 4 ---
+        try:
+            if float(new_aff_str) > 0:
+                st.error("🚨 **CRITICAL WARNING:** The redesigned analog returned a **POSITIVE binding affinity**. The new functional group is likely creating a severe steric clash inside the pocket. This analog is thermodynamically unviable in this specific grid box.")
+        except: pass
+
         with open("protein.pdbqt", "r") as f: p_data = f.read()
         
         col_3d_1, col_3d_2 = st.columns(2)
