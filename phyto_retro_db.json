@@ -1,136 +1,1293 @@
 {
-    "🔴 Anticancer": {
-        "Haridra (Turmeric)": {
-            "scientific_name": "Curcuma longa",
-            "phytochemical": "Curcumin",
-            "receptor_id": "1M17",
-            "native_ligand_smiles": "COC1=C(C=CC(=C1)C=CC(=O)CC(=O)C=CC2=CC(=C(C=C2)O)OC)O",
-            "analogs": {
-                "Di-O-methyl Curcumin": "COC1=C(C=CC(=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC(=C(C=C2)OC)OC)OC",
-                "2'-Fluoro Curcumin": "COC1=C(C=CC(=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC(=C(C=C2F)O)OC)O",
-                "Tetrahydrocurcumin": "COC1=C(CCCC(=O)CC(=O)CCC2=CC(=C(C=C2)O)OC)O",
-                "Curcumin-piperazine amide": "COC1=C(C=CC(=C1)/C=C/C(=O)CN1CCNCC1)/C=C/C2=CC(=C(C=C2)O)OC",
-                "Curcumin-boron complex": "B1(OC(=O)/C=C/C2=CC(=C(C=C2)O)OC)OC(=O)/C=C/C3=CC(=C(C=C3)O)OC1"
-            }
-        },
-        "Ashwagandha": {
-            "scientific_name": "Withania somnifera",
-            "phytochemical": "Withaferin A",
-            "receptor_id": "6Y6G",
-            "native_ligand_smiles": "CC1=C(C(=O)OC(C1)C(C)C2CCC3C2(CCC4C3CC5C6(C4(C(=O)C=CC6O)C)O5)C)CO",
-            "analogs": {
-                "4-Methoxy Withaferin A": "CC1(C(=O)C=CC2(C1CC3C4(C2CC(C4=O)O)C)C)OC",
-                "4-Azido Withaferin A": "CC1(C(=O)C=CC2(C1CC3C4(C2CC(C4=O)O)C)C)N=[N+]=[N-]",
-                "Withaferin A-ethanolamine": "CC1(C(=O)C=CC2(C1CC3C4(C2CC(C4=O)NCCO)C)C)O",
-                "6-Fluoro Withaferin A": "CC1(C(=O)C=CC2(C1CC3C4(C2CC(C4=O)F)C)C)O",
-                "Withaferin A-glucoside": "CC1(C(=O)C=CC2(C1CC3C4(C2CC(C4=O)OC5OC(CO)C(O)C(O)C5O)C)C)O"
-            }
-        },
-        "Guduchi": {
-            "scientific_name": "Tinospora cordifolia",
-            "phytochemical": "Berberine",
-            "receptor_id": "4FM9",
-            "native_ligand_smiles": "COC1=C(C2=C[N+]3=C(C=C2C=C1)C4=CC5=C(C=C4CC3)OCO5)OC",
-            "analogs": {
-                "N-Propargyl Berberine": "COC1=C(C2=C[N+]3(CC#C)=C(C=C2C=C1)C4=CC5=C(C=C4CC3)OCO5)OC",
-                "9-Hydroxyberberine": "COC1=C(C2=C[N+]3=C(C=C2C=C1)C4=CC5=C(C=C4CC3)OCO5)O",
-                "13-Fluoroberberine": "COC1=C(C2=C[N+]3=C(C=C2C=C1)C4=CC5=C(C=C4CC3F)OCO5)OC",
-                "Difluoro Berberine": "COC1=C(C2=C[N+]3=C(C=C2C=C1)C4=CC5=C(C=C4CC3)C(F)(F)O5)OC",
-                "N-Benzyl Berberine salt": "COC1=C(C2=C[N+]3(Cc4ccccc4)=C(C=C2C=C1)C4=CC5=C(C=C4CC3)OCO5)OC.[Br-]"
-            }
-        },
-        "Tulsi (Holy Basil)": {
-            "scientific_name": "Ocimum sanctum",
-            "phytochemical": "Eugenol",
-            "receptor_id": "1NME",
-            "native_ligand_smiles": "COC1=C(C=CC(=C1)CC=C)O",
-            "analogs": {
-                "Isoeugenol epoxide": "C1OC1Cc1ccc(O)c(OC)c1",
-                "Eugenol acetate": "C=CCc1ccc(OC(C)=O)c(OC)c1",
-                "O-Ethyl Eugenol": "C=CCc1ccc(O)c(OCC)c1",
-                "Propargyl Eugenol": "C#CCc1ccc(O)c(OC)c1",
-                "4-Nitro Eugenol": "C=CCc1cc([N+](=O)[O-])c(OC)c(O)c1"
-            }
-        },
-        "Nimba (Neem)": {
-            "scientific_name": "Azadirachta indica",
-            "phytochemical": "Nimbin",
-            "receptor_id": "3V2A",
-            "native_ligand_smiles": "CC1=C2C(CC1C3=COC=C3)OC4C2(C(C5(C(C4OC(=O)C)C(C=CC5=O)(C)C(=O)OC)C)CC(=O)OC)C",
-            "analogs": {
-                "Nimbin amide": "CC1(C(=O)N)CCC2=C(C1)C(=O)C1=C(C2=O)C(OC(C)=O)=CC=C1",
-                "3-Fluoro Nimbin": "CC1(C(=O)OC)CCC2=C(C1F)C(=O)C1=C(C2=O)C(OC(C)=O)=CC=C1",
-                "Deacetyl Nimbin": "CC1(C(=O)OC)CCC2=C(C1)C(=O)C1=C(C2=O)C(O)=CC=C1",
-                "Ethyl Nimbin": "CC1(C(=O)OCC)CCC2=C(C1)C(=O)C1=C(C2=O)C(OC(C)=O)=CC=C1",
-                "Sulfonyl Nimbin": "CC1(C(=O)OC)CCC2=C(C1)C(=O)C1=C(C2=O)C(OS(=O)(=O)C)=CC=C1"
-            }
-        }
+  "🔴 Anticancer": {
+    "Haridra (Turmeric)": {
+      "scientific_name": "Curcuma longa",
+      "phytochemical": "Curcumin",
+      "receptor_id": "1M17",
+      "native_ligand_smiles": "COC1=C(C=CC(=C1)C=CC(=O)CC(=O)C=CC2=CC(=C(C=C2)O)OC)O",
+      "analogs": {
+        "Di-O-methyl Curcumin": "COC1=C(C=CC(=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC(=C(C=C2)OC)OC)OC",
+        "2'-Fluoro Curcumin": "COC1=C(C=CC(=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC(=C(C=C2F)O)OC)O",
+        "Tetrahydrocurcumin": "COC1=C(CCCC(=O)CC(=O)CCC2=CC(=C(C=C2)O)OC)O",
+        "Curcumin-piperazine amide": "COC1=C(C=CC(=C1)/C=C/C(=O)CN1CCNCC1)/C=C/C2=CC(=C(C=C2)O)OC",
+        "Curcumin-boron complex": "B1(OC(=O)/C=C/C2=CC(=C(C=C2)O)OC)OC(=O)/C=C/C3=CC(=C(C=C3)O)OC1"
+      }
     },
-    "🟢 Antidiabetic": {
-        "Haridra (Turmeric)": {
-            "scientific_name": "Curcuma longa",
-            "phytochemical": "Bisdemethoxycurcumin",
-            "receptor_id": "3WY1",
-            "native_ligand_smiles": "OC1=CC(=CC=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC=C(O)C=C2",
-            "analogs": {
-                "Dimethoxy Bisdemethoxycurcumin": "COC1=CC(=CC=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC=C(OC)C=C2",
-                "3-Fluoro Bisdemethoxycurcumin": "OC1=CC(=CC=C1F)/C=C/C(=O)CC(=O)/C=C/C2=CC=C(O)C=C2",
-                "Bisdemethoxycurcumin glucoside": "OC1=CC(=CC=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC=C(OC3OC(CO)C(O)C(O)C3O)C=C2",
-                "Hexahydrobisdemethoxycurcumin": "OC1=CC(=CC=C1)CCC(=O)CC(=O)CCC2=CC=C(O)C=C2",
-                "Bisdemethoxycurcumin sulfonate": "OS(=O)(=O)OC1=CC(=CC=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC=C(OS(=O)(=O)O)C=C2"
-            }
-        },
-        "Ashwagandha": {
-            "scientific_name": "Withania somnifera",
-            "phytochemical": "Withanolide D",
-            "receptor_id": "2PRG",
-            "native_ligand_smiles": "CC1(C(=O)C=CC2(C)CCC3C4(CC(O)C(=O)C4(C)CCC3C12)O)O",
-            "analogs": {
-                "4-Methoxy Withanolide D": "CC1(C(=O)C=CC2(C)CCC3C4(CC(O)C(=O)C4(C)CCC3C12)O)OC",
-                "Fluoro Withanolide D": "CC1(C(=O)C=CC2(C)CCC3C4(CC(F)C(=O)C4(C)CCC3C12)O)O",
-                "Withanolide D glucoside": "CC1(C(=O)C=CC2(C)CCC3C4(CC(OC5OC(CO)C(O)C(O)C5O)C(=O)C4(C)CCC3C12)O)O",
-                "2,3-Epoxy Withanolide D": "CC1(C(=O)C=CC2(C)CCC3C4(CC(O)C(=O)C4(C)CCC3C12)O)O",
-                "3-Amino Withanolide D": "CC1(C(=O)C=CC2(C)CCC3C4(CC(N)C(=O)C4(C)CCC3C12)O)O"
-            }
-        },
-        "Guduchi": {
-            "scientific_name": "Tinospora cordifolia",
-            "phytochemical": "Tinosporaside",
-            "receptor_id": "5NN5",
-            "native_ligand_smiles": "OCC1OC(Oc2ccc3c(c2)CC(=O)O3)C(O)C(O)C1O",
-            "analogs": {
-                "Acetyl Tinosporaside": "OCC1OC(Oc2ccc3c(c2)CC(=O)O3)C(OC(C)=O)C(O)C1O",
-                "2'-Fluoro Tinosporaside": "OCC1OC(Oc2ccc3c(c2)CC(=O)O3)C(F)C(O)C1O",
-                "Methyl ester Tinosporaside": "OCC1OC(Oc2ccc3c(c2)CC(=O)OC3)C(O)C(O)C1O",
-                "Hydroxy Tinosporaside": "OCC1OC(Oc2ccc3c(c2O)CC(=O)O3)C(O)C(O)C1O",
-                "Deoxy Tinosporaside": "OCC1OC(Oc2ccc3c(c2)CC(=O)O3)CC(O)C1O"
-            }
-        },
-        "Tulsi (Holy Basil)": {
-            "scientific_name": "Ocimum sanctum",
-            "phytochemical": "Ursolic acid",
-            "receptor_id": "1IRK",
-            "native_ligand_smiles": "CC1CCC2(CCC3(C(=CCC4C3(CCC5C4(CCC(C5(C)C)O)C)C)C2C1C)C)C(=O)O",
-            "analogs": {
-                "3-Acetyl Ursolic acid": "CC1CCC2(CCC3(C)C(CCC4C3(CCC(=C4)C(=O)O)C)C2C1OC(C)=O)C(=O)O",
-                "Ursolic acid amide": "CC1CCC2(CCC3(C)C(CCC4C3(CCC(=C4)C(N)=O)C)C2C1O)C(N)=O",
-                "3-Amino Ursolic acid": "CC1CCC2(CCC3(C)C(CCC4C3(CCC(=C4)C(=O)O)C)C2C1N)C(=O)O",
-                "12-Fluoro Ursolic acid": "CC1CCC2(CCC3(C)C(CCC4C3(CCC(=C4F)C(=O)O)C)C2C1O)C(=O)O",
-                "Ursolic acid-3-glucoside": "CC1CCC2(CCC3(C)C(CCC4C3(CCC(=C4)C(=O)O)C)C2C1OC5OC(CO)C(O)C(O)C5O)C(=O)O"
-            }
-        },
-        "Nimba (Neem)": {
-            "scientific_name": "Azadirachta indica",
-            "phytochemical": "Gedunin",
-            "receptor_id": "1V4S",
-            "native_ligand_smiles": "CC(=O)OC1CC2C(C(=O)C=CC2(C3C1(C45C(O4)C(=O)OC(C5(CC3)C)C6=COC=C6)C)C)(C)C",
-            "analogs": {
-                "Azido Gedunin": "N/A",
-                "Fluoro Gedunin": "N/A",
-                "7-Acetyl Gedunin": "N/A",
-                "Dihydro Gedunin": "N/A",
-                "Gedunin glucoside": "N/A"
-            }
-        }
+    "Ashwagandha": {
+      "scientific_name": "Withania somnifera",
+      "phytochemical": "Withaferin A",
+      "receptor_id": "6Y6G",
+      "native_ligand_smiles": "CC1=C(C(=O)OC(C1)C(C)C2CCC3C2(CCC4C3CC5C6(C4(C(=O)C=CC6O)C)O5)C)CO",
+      "analogs": {
+        "4-Methoxy Withaferin A": "CC1(C(=O)C=CC2(C1CC3C4(C2CC(C4=O)O)C)C)OC",
+        "4-Azido Withaferin A": "CC1(C(=O)C=CC2(C1CC3C4(C2CC(C4=O)O)C)C)N=[N+]=[N-]",
+        "Withaferin A-ethanolamine": "CC1(C(=O)C=CC2(C1CC3C4(C2CC(C4=O)NCCO)C)C)O",
+        "6-Fluoro Withaferin A": "CC1(C(=O)C=CC2(C1CC3C4(C2CC(C4=O)F)C)C)O",
+        "Withaferin A-glucoside": "CC1(C(=O)C=CC2(C1CC3C4(C2CC(C4=O)OC5OC(CO)C(O)C(O)C5O)C)C)O"
+      }
+    },
+    "Guduchi": {
+      "scientific_name": "Tinospora cordifolia",
+      "phytochemical": "Berberine",
+      "receptor_id": "4FM9",
+      "native_ligand_smiles": "COC1=C(C2=C[N+]3=C(C=C2C=C1)C4=CC5=C(C=C4CC3)OCO5)OC",
+      "analogs": {
+        "N-Propargyl Berberine": "COC1=C(C2=C[N+]3(CC#C)=C(C=C2C=C1)C4=CC5=C(C=C4CC3)OCO5)OC",
+        "9-Hydroxyberberine": "COC1=C(C2=C[N+]3=C(C=C2C=C1)C4=CC5=C(C=C4CC3)OCO5)O",
+        "13-Fluoroberberine": "COC1=C(C2=C[N+]3=C(C=C2C=C1)C4=CC5=C(C=C4CC3F)OCO5)OC",
+        "Difluoro Berberine": "COC1=C(C2=C[N+]3=C(C=C2C=C1)C4=CC5=C(C=C4CC3)C(F)(F)O5)OC",
+        "N-Benzyl Berberine salt": "COC1=C(C2=C[N+]3(Cc4ccccc4)=C(C=C2C=C1)C4=CC5=C(C=C4CC3)OCO5)OC.[Br-]"
+      }
+    },
+    "Tulsi (Holy Basil)": {
+      "scientific_name": "Ocimum sanctum",
+      "phytochemical": "Eugenol",
+      "receptor_id": "1NME",
+      "native_ligand_smiles": "COC1=C(C=CC(=C1)CC=C)O",
+      "analogs": {
+        "Isoeugenol epoxide": "C1OC1Cc1ccc(O)c(OC)c1",
+        "Eugenol acetate": "C=CCc1ccc(OC(C)=O)c(OC)c1",
+        "O-Ethyl Eugenol": "C=CCc1ccc(O)c(OCC)c1",
+        "Propargyl Eugenol": "C#CCc1ccc(O)c(OC)c1",
+        "4-Nitro Eugenol": "C=CCc1cc([N+](=O)[O-])c(OC)c(O)c1"
+      }
+    },
+    "Nimba (Neem)": {
+      "scientific_name": "Azadirachta indica",
+      "phytochemical": "Nimbin",
+      "receptor_id": "3V2A",
+      "native_ligand_smiles": "CC1=C2C(CC1C3=COC=C3)OC4C2(C(C5(C(C4OC(=O)C)C(C=CC5=O)(C)C(=O)OC)C)CC(=O)OC)C",
+      "analogs": {
+        "Nimbin amide": "CC1(C(=O)N)CCC2=C(C1)C(=O)C1=C(C2=O)C(OC(C)=O)=CC=C1",
+        "3-Fluoro Nimbin": "CC1(C(=O)OC)CCC2=C(C1F)C(=O)C1=C(C2=O)C(OC(C)=O)=CC=C1",
+        "Deacetyl Nimbin": "CC1(C(=O)OC)CCC2=C(C1)C(=O)C1=C(C2=O)C(O)=CC=C1",
+        "Ethyl Nimbin": "CC1(C(=O)OCC)CCC2=C(C1)C(=O)C1=C(C2=O)C(OC(C)=O)=CC=C1",
+        "Sulfonyl Nimbin": "CC1(C(=O)OC)CCC2=C(C1)C(=O)C1=C(C2=O)C(OS(=O)(=O)C)=CC=C1"
+      }
+    },
+    "Haritaki": {
+      "scientific_name": "Terminalia chebula",
+      "phytochemical": "Chebulinic acid",
+      "receptor_id": "1SCU",
+      "native_ligand_smiles": "C1=C2C(=C(C(=C1O)O)O)C(C(OC2=O)C(=O)O)C(CC(=O)O)C(=O)O",
+      "analogs": {
+        "Methyl chebulic ester": "COC(=O)C1OC(=O)c2cc(O)c(O)c(O)c2",
+        "Chebulic acid glucoside": "OCC1OC(OC(=O)C2OC(=O)c3cc(O)c(O)c(O)c3)C(O)C(O)C1O",
+        "3-Fluoro Chebulic acid": "OC(=O)C1OC(=O)c2cc(O)c(F)c(O)c2",
+        "Chebulic amide": "NC(=O)C1OC(=O)c2cc(O)c(O)c(O)c2",
+        "Trimethyl Chebulic acid": "COC1=C(OC)C(=CC2=C1C(=O)OC2C(=O)OC)OC"
+      }
+    },
+    "Guggulu": {
+      "scientific_name": "Commiphora mukul",
+      "phytochemical": "Guggulsterone",
+      "receptor_id": "1OSV",
+      "native_ligand_smiles": "CC=C1C(=O)CC2C1(CCC3C2CCC4=CC(=O)CCC34C)C",
+      "analogs": {
+        "2-Cyano Guggulsterone": "CC1(C)CC=C2CC(=O)C(=CC2=C1)C#N",
+        "16-Fluoro Guggulsterone": "CC1(C)CC=C2CC(=O)/C(=C\\C2=C1)F",
+        "Guggulsterone oxime": "CC1(C)CC=C2CC(=N/O)C(=CC2=C1)",
+        "Guggulsterone glucoside": "CC1(C)CC=C2CC(=O)C(=CC2=C1OC3OC(CO)C(O)C(O)C3O)",
+        "Aromatic Guggulsterone": "CC1(C)CC=C2CC(=O)c3ccccc3C2=C1"
+      }
+    },
+    "Shatavari": {
+      "scientific_name": "Asparagus racemosus",
+      "phytochemical": "Shatavarin IV",
+      "receptor_id": "1ERE",
+      "native_ligand_smiles": "See PubChem",
+      "analogs": {
+        "Deglycosyl Shatavarin": "OC1CC2(C)C(CCC3C2CCC2(C)C3=CC(O)C2)C1",
+        "16-Fluoro Shatavarin": "OC1CC2(C)C(CCC3C2CCC2(C)C3=CC(F)C2)C1",
+        "Amino-Shatavarin": "OC1CC2(C)C(CCC3C2CCC2(C)C3=CC(NC(C)=O)C2)C1",
+        "Shatavarin phosphate": "OP(=O)(O)OC1CC2(C)C(CCC3C2CCC2(C)C3=CC(O)C2)C1",
+        "Methyl ester Shatavarin": "COC(=O)C1CC2(C)C(CCC3C2CCC2(C)C3=CC(O)C2)C1"
+      }
+    },
+    "Brahmi": {
+      "scientific_name": "Bacopa monnieri",
+      "phytochemical": "Bacoside A",
+      "receptor_id": "4EY7",
+      "native_ligand_smiles": "CC(=C)C1CCC2(C1C3CCC4C5(CCC(C(C5CCC4(C3(CC2)C(=O)O)C)(C)C)O)C)C",
+      "analogs": {
+        "Fluoro Bacoside": "CC1(C)CCC2=C(C1)C(F)=CC=C2",
+        "Bacoside A-galactose": "OCC1OC(OCC2OC(OC3CC4(C)C(CCC5C4CCC4(C)C5=CC(O)C4)C3)C(O)C(O)C2O)C(O)C(O)C1O",
+        "Bacoside fluoride": "FC1OC(OC2CC3(C)C(CCC4C3CCC3(C)C4=CC(O)C3)C2)C(O)C(O)C1O",
+        "Amino Bacoside": "NC1OC(OC2CC3(C)C(CCC4C3CCC3(C)C4=CC(O)C3)C2)C(O)C(O)C1O",
+        "Bacoside phosphate": "OP(=O)(O)OC1OC(OC2CC3(C)C(CCC4C3CCC3(C)C4=CC(O)C3)C2)C(O)C(O)C1O"
+      }
+    },
+    "Kalmegh": {
+      "scientific_name": "Andrographis paniculata",
+      "phytochemical": "Andrographolide",
+      "receptor_id": "1IKN",
+      "native_ligand_smiles": "CC12CCC(C(C1CCC(=C)C2CC=C3C(COC3=O)O)(C)CO)O",
+      "analogs": {
+        "3-Acetyl Andrographolide": "CC1(CCC2CC(=C)C(CC2=C1)OC(=O)C)C=O",
+        "14-Chloro Andrographolide": "CC1(CCC2CC(=C)C(CC2=C1)OC3C(C(C(C(O3)CO)O)O)O)C(=O)Cl",
+        "Andrographolide-morpholine": "CC1(CCC2CC(=C)C(CC2=C1)OC3C(C(C(C(O3)CO)O)O)O)C(=O)N1CCOCC1",
+        "14-Fluoro Andrographolide": "CC1(CCC2CC(=C)C(CC2=C1)OC3C(C(C(C(O3)CO)O)O)O)C(F)=O",
+        "Andrographolide sulfonamide": "CC1(CCC2CC(=C)C(CC2=C1)OC3C(C(C(C(O3)CO)O)O)O)CNS(=O)(=O)c1ccccc1"
+      }
+    },
+    "Kutki": {
+      "scientific_name": "Picrorhiza kurroa",
+      "phytochemical": "Picroside I",
+      "receptor_id": "2B7A",
+      "native_ligand_smiles": "C1=CC=C(C=C1)C=CC(=O)OCC2C(C(C(C(O2)OC3C4C(C=CO3)C(C5C4(O5)CO)O)O)O)O",
+      "analogs": {
+        "Acetyl Picroside I": "OCC1OC(OC2=CC(OC(C)=O)=CC=C2)C(O)C(O)C1O",
+        "3-Fluoro Picroside I": "OCC1OC(OC2=CC(O)=C(F)C=C2)C(O)C(O)C1O",
+        "Picroside I xyloside": "OCC1OC(OC2=CC(O)=CC=C2)C(O)C1O",
+        "Picroside I cinnamate": "OCC1OC(OC2=CC(OC(=O)/C=C/c3ccccc3)=CC=C2)C(O)C(O)C1O",
+        "Amino Picroside I": "OCC1OC(OC2=CC(O)=CC=C2)C(N)C(O)C1O"
+      }
+    },
+    "Vasaka (Malabar Nut)": {
+      "scientific_name": "Justicia adhatoda",
+      "phytochemical": "Vasicine",
+      "receptor_id": "1HUC",
+      "native_ligand_smiles": "C1CN2CC3=CC=CC=C3N=C2C1O",
+      "analogs": {
+        "Vasicinone": "O=C1CCN2CCC3=CC=CC=C3C2=N1",
+        "9-Fluoro Vasicine": "OC1CCN2CCC3=CC=CC(F)=C3C2=N1",
+        "Vasicine-piperazine hybrid": "OC1CCN2CCN3CCC4=CC=CC=C4C3=N12",
+        "3-Hydroxymethyl Vasicine": "OCC1(O)CCN2CCC3=CC=CC=C3C2=N1",
+        "N-Methyl Vasicine": "OC1CCN2(C)CCC3=CC=CC=C3C2=N1"
+      }
+    },
+    "Shigru (Moringa)": {
+      "scientific_name": "Moringa oleifera",
+      "phytochemical": "Quercetin",
+      "receptor_id": "1G5M",
+      "native_ligand_smiles": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)O",
+      "analogs": {
+        "Isorhamnetin (3-O-methyl Quercetin)": "COC1=C(C2=CC(=O)C3=C(C=C(C=C3O2)O)O)C=C(O)C(=C1)O",
+        "Quercetin-7-glucoside": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)OC4OC(CO)C(O)C(O)C4O)O)O)O)O",
+        "3'-Fluoro Quercetin": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)F)O",
+        "8-Prenyl Quercetin": "CC(=C)CC1=C(O)C=C2C(=C1)OC(=C(C2=O)O)C1=CC(=C(O)C(=C1)O)O",
+        "Quercetin-3-phosphate": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)OP(=O)(O)O)O)O"
+      }
+    },
+    "Methika (Fenugreek)": {
+      "scientific_name": "Trigonella foenum-graecum",
+      "phytochemical": "Diosgenin",
+      "receptor_id": "2AM9",
+      "native_ligand_smiles": "CC1CCC2(C(C3C(O2)CC4C3(CCC5C4CC=C6C5(CCC(C6)O)C)C)C)OC1",
+      "analogs": {
+        "Diosgenin acetate": "CC1(CCC2C(C1)C3CC4C5(CCC(C5CCC4(C3CC2)C)OC(C)=O)C)C",
+        "Diosgenin furostanol": "CC1(CCC2C(C1)C3CC4C5(CCC(C5CCC4(C3CC2)C)O)C)CO",
+        "16-Fluoro Diosgenin": "CC1(CCC2C(C1)C3CC4C5(CCC(C5CCC4(C3CC2)C)(F)O)C)C",
+        "3-Amino Diosgenin": "CC1(CCC2C(C1)C3CC4C5(CCC(C5CCC4(C3CC2)C)N)C)C",
+        "Diosgenin-3-phosphate": "CC1(CCC2C(C1)C3CC4C5(CCC(C5CCC4(C3CC2)C)OP(=O)(O)O)C)C"
+      }
+    },
+    "Amalaki (Amla)": {
+      "scientific_name": "Phyllanthus emblica",
+      "phytochemical": "Ellagic acid",
+      "receptor_id": "4FM9",
+      "native_ligand_smiles": "C1=C2C3=C(C(=C1O)O)OC(=O)C4=CC(=C(C(=C43)OC2=O)O)O",
+      "analogs": {
+        "3,3'-Di-O-methyl Ellagic acid": "COC1=C2C(=CC3=C(C=C1)C(=O)OC3=O)C(=O)OC2=O",
+        "Ellagic acid-4-glucoside": "O=C1OC2=CC3=C(C=C2C1=C4C(=O)OC5=CC6=C(C=C5C4=C3)C(=O)OC6=O)OC3OC(CO)C(O)C(O)C3O",
+        "Ellagic acid-lysine conjugate": "O=C(NCCCC(N)C(=O)O)C1=CC2=C(C=C1)C(=O)OC2=O",
+        "3-Fluoro Ellagic acid": "O=C1OC2=C(F)C3=C(C=C2C1=C4C(=O)OC5=CC6=C(C=C5C4=C3)C(=O)OC6=O)",
+        "Urolithin A (metabolite)": "OC1=CC2=C(C=C1)C(=O)OC3=CC(=CC=C23)O"
+      }
+    },
+    "Arjuna": {
+      "scientific_name": "Terminalia arjuna",
+      "phytochemical": "Arjunic acid",
+      "receptor_id": "3RCD",
+      "native_ligand_smiles": "CC1(C)CC=C2CC(O)C3C(CCC4(C)C3CCC4=O)C2C1",
+      "analogs": {
+        "Arjunic acid amide": "CC1(C)CC=C2CC(O)C3C(CCC4(C)C3CCC4=O)C2C1",
+        "3-Acetyl Arjunic acid": "CC1(C)CC=C2CC(OC(C)=O)C3C(CCC4(C)C3CCC4=O)C2C1",
+        "16-Fluoro Arjunic acid": "CC1(C)CC=C2CC(O)C3C(CCC4(C)C3CCC4(F)=O)C2C1",
+        "Arjunic acid glucoside": "CC1(C)CC=C2CC(OC3OC(CO)C(O)C(O)C3O)C3C(CCC4(C)C3CCC4=O)C2C1",
+        "Arjunic acid-3-phosphate": "CC1(C)CC=C2CC(OP(=O)(O)O)C3C(CCC4(C)C3CCC4=O)C2C1"
+      }
+    },
+    "Pippali (Long Pepper)": {
+      "scientific_name": "Piper longum",
+      "phytochemical": "Piperine",
+      "receptor_id": "6FN1",
+      "native_ligand_smiles": "C1CCN(CC1)C(=O)C=CC=CC2=CC3=C(C=C2)OCO3",
+      "analogs": {
+        "Piperine-morpholine": "/C(=C/c1ccc2c(c1)OCO2)\\C=C\\C(=O)N1CCOCC1",
+        "Difluoro Piperine": "/C(=C/c1ccc2c(c1)C(F)(F)O2)\\C=C\\C(=O)N1CCCC1",
+        "Dihydropiperine": "O=C(CCCC1=CC=C2C(=C1)OCO2)N1CCCC1",
+        "N-Methyl Piperine": "/C(=C/c1ccc2c(c1)OCO2)\\C=C\\C(=O)[N+]1(C)CCCC1",
+        "5'-Fluoro Piperine": "/C(=C/c1ccc2c(c1F)OCO2)\\C=C\\C(=O)N1CCCC1"
+      }
+    },
+    "Shunthi (Ginger)": {
+      "scientific_name": "Zingiber officinale",
+      "phytochemical": "Gingerol",
+      "receptor_id": "2AZ5",
+      "native_ligand_smiles": "CCCCCC(CC(=O)CCC1=CC(=C(C=C1)O)OC)O",
+      "analogs": {
+        "6-Shogaol": "CCCC/C=C/C(=O)CCc1ccc(O)c(OC)c1",
+        "6-Gingediol": "CCCCC(O)CC(O)CCc1ccc(O)c(OC)c1",
+        "O-Methyl Gingerol": "CCCCC(O)CC(=O)CCc1ccc(OC)c(OC)c1",
+        "1'-Fluoro Gingerol": "CCCCC(O)CC(=O)CCc1ccc(O)c(OC)c1F",
+        "Gingerol acetate": "CCCCC(OC(C)=O)CC(=O)CCc1ccc(O)c(OC)c1"
+      }
+    },
+    "Kala Jeera (Black Seed)": {
+      "scientific_name": "Nigella sativa",
+      "phytochemical": "Thymoquinone",
+      "receptor_id": "1G5M",
+      "native_ligand_smiles": "CC1=CC(=O)C(=CC1=O)C(C)C",
+      "analogs": {
+        "2-Piperidino Thymoquinone": "CC1=CC(=O)C(=CC1=O)C(C)C",
+        "Thymohydroquinone": "CC1=CC(O)=C(C(C)C)C=C1O",
+        "2-CF3 Thymoquinone": "FC(F)(F)C1=CC(=O)C(=CC1=O)C(C)C",
+        "Thymoquinone mono-oxime": "CC1=CC(=O)/C(=C/C1=N/O)C(C)C",
+        "Thymoquinone epoxide": "CC1=CC2(OC2=O)C(=CC1=O)C(C)C"
+      }
+    },
+    "Chirayata": {
+      "scientific_name": "Swertia chirayita",
+      "phytochemical": "Amarogentin",
+      "receptor_id": "1K4T",
+      "native_ligand_smiles": "C=CC1C2CCOC(=O)C2=COC1OC3C(C(C(C(O3)CO)O)O)OC(=O)C4=C(C=C(C=C4O)O)C5=CC(=CC=C5)O",
+      "analogs": {
+        "Amarogentin aglycone": "OC1=CC=CC(=C1)C(=O)OC1=CC=CC(=C1)O",
+        "O-Methyl Amarogentin": "COC1=CC=CC(=C1)C(=O)OC1=CC=CC(=C1)OC",
+        "3-Fluoro Amarogentin": "OC1=CC=C(F)C(=C1)C(=O)OC1=CC=CC(=C1)O",
+        "Amarogentin amide": "OC1=CC=CC(=C1)C(=N)OC1=CC=CC(=C1)O",
+        "Deoxy Amarogentin": "OC1=CC=CC(=C1)C(=O)OC1=CC=CC(=C1)OC2OC(C)C(O)C(O)C2O"
+      }
+    },
+    "Manjistha (Indian Madder)": {
+      "scientific_name": "Rubia cordifolia",
+      "phytochemical": "Rutin",
+      "receptor_id": "1PQ1",
+      "native_ligand_smiles": "CC1C(C(C(C(O1)OCC2C(C(C(C(O2)OC3=C(OC4=CC(=CC(=C4C3=O)O)O)C5=CC(=C(C=C5)O)O)O)O)O)O)O)O",
+      "analogs": {
+        "Quercetin (aglycone)": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)O",
+        "3'-Fluoro Rutin": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)F)OC2OC(CO)C(O)C(O)C2O",
+        "3-O-Methyl Rutin": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)OC)O)OC2OC(CO)C(O)C(O)C2O",
+        "Rutin phosphate": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)OP(=O)(O)O)O)OC2OC(CO)C(O)C(O)C2O",
+        "Amino Rutin": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)OC2OC(CO)C(N)C(O)C2O"
+      }
+    },
+    "Resveratrol Plant (Grape)": {
+      "scientific_name": "Vitis vinifera",
+      "phytochemical": "Resveratrol",
+      "receptor_id": "3LN1",
+      "native_ligand_smiles": "C1=CC(=CC=C1C=CC2=CC(=CC(=C2)O)O)O",
+      "analogs": {
+        "Trimethoxy Resveratrol (Pterostilbene)": "COC1=CC(=CC(=C1)/C=C/C2=CC(=CC(=C2)OC)OC)OC",
+        "Alpha-bromo Resveratrol": "OC1=CC(=CC(=C1)/C(Br)=C/C2=CC(=CC(=C2)O)O)O",
+        "Resveratrol-3-O-glucoside": "OC1=CC(=CC(=C1)/C=C/C2=CC(=CC(=C2)O)OC3OC(CO)C(O)C(O)C3O)O",
+        "Resveratrol-4'-sulfonate": "OC1=CC(=CC(=C1)/C=C/C2=CC(=CC(=C2)O)OS(=O)(=O)O)O",
+        "3'-Nitro Resveratrol": "OC1=CC(=CC(=C1)/C=C/C2=CC(=C([N+](=O)[O-])C(=C2)O)O)O"
+      }
+    },
+    "Bhringaraj (False Daisy)": {
+      "scientific_name": "Eclipta alba",
+      "phytochemical": "Wedelolactone",
+      "receptor_id": "2AM9",
+      "native_ligand_smiles": "COC1=CC(=C2C(=C1)OC(=O)C3=C2OC4=CC(=C(C=C43)O)O)O",
+      "analogs": {
+        "Dihydroxy Wedelolactone": "OC1=CC2=C(OC3=C(C(=O)OC23)O)C=C1O",
+        "3-Methyl Wedelolactone": "COC1=CC2=C(OC3=C(C(=O)OC23)O)C=C1O",
+        "Wedelolactone glucoside": "OC1=CC2=C(OC3=C(C(=O)OC23)O)C=C1OC1OC(CO)C(O)C(O)C1O",
+        "5-Fluoro Wedelolactone": "OC1=CC2=C(OC3=C(C(=O)OC23)F)C=C1O",
+        "Wedelolactone amide": "OC1=CC2=C(OC3=C(C(N)=O)OC23)C=C1O"
+      }
+    },
+    "Plumbago (Chitrak)": {
+      "scientific_name": "Plumbago zeylanica",
+      "phytochemical": "Plumbagin",
+      "receptor_id": "1IKN",
+      "native_ligand_smiles": "CC1=CC(=O)C2=C(C1=O)C=CC=C2O",
+      "analogs": {
+        "3-Geranyl Plumbagin": "CC(=CCCC(=C)CCC)CC1=CC(=O)c2cccc(O)c2C1=O",
+        "5-Hydroxy Plumbagin": "CC1=CC(=O)c2c(O)ccc(O)c2C1=O",
+        "3-Amino Plumbagin": "CC1=C(N)C(=O)c2cccc(O)c2C1=O",
+        "3-Acetyl Plumbagin": "CC(=O)C1=CC(=O)c2cccc(O)c2C1=O",
+        "2-Fluoro Plumbagin": "CC1=CC(=O)c2c(F)ccc(O)c2C1=O"
+      }
+    },
+    "Embelia (Vidanga)": {
+      "scientific_name": "Embelia ribes",
+      "phytochemical": "Embelin",
+      "receptor_id": "2OPZ",
+      "native_ligand_smiles": "CCCCCCCCCCCC1=C(C(=O)C=C(C1=O)O)O",
+      "analogs": {
+        "3-Propyl Embelin": "CCCc1c(O)cc(O)c(=O)c1=O",
+        "3-Amino Embelin": "Nc1c(O)cc(O)c(=O)c1=O",
+        "5-Hydroxy Embelin": "CCCCCCCCCCc1c(O)c(O)c(=O)c(O)c1=O",
+        "Embelin methyl ester": "CCCCCCCCCCc1c(OC)cc(OC)c(=O)c1=O",
+        "6-Fluoro Embelin": "CCCCCCCCCCc1c(O)cc(O)c(=O)c1F"
+      }
+    },
+    "Centella (Mandukparni)": {
+      "scientific_name": "Centella asiatica",
+      "phytochemical": "Asiaticoside",
+      "receptor_id": "3HNG",
+      "native_ligand_smiles": "CC1CCC2(CCC3(C(=CCC4C3(CCC5C4(CC(C(C5(C)CO)O)O)C)C)C2C1C)C)C(=O)OC6C(C(C(C(O6)COC7C(C(C(C(O7)CO)OC8C(C(C(C(O8)C)O)O)O)O)O)O)O)O",
+      "analogs": {
+        "Asiaticoside B": "OCC1OC(OC2CCC3(C)C(CCC4C3CCC3(C)C4=CCC3C(=O)O)C2)C(O)C(O)C1O",
+        "Fluoro Asiaticoside": "OCC1OC(OC2CCC3(C)C(CCC4C3CCC3(C)C4=CCC3(F)C(=O)O)C2)C(O)C(O)C1O",
+        "Asiaticoside phosphate": "OP(=O)(O)OCC1OC(OC2CCC3(C)C(CCC4C3CCC3(C)C4=CCC3C(=O)O)C2)C(O)C(O)C1O",
+        "Asiatic acid": "OC1CCC2(C)C(CCC3C2CCC2(C)C3=CCC2C(=O)O)C1",
+        "Amino Asiaticoside": "OCC1OC(OC2CCC3(C)C(CCC4C3CCC3(C)C4=CCC3C(=O)O)C2)C(N)C(O)C1O"
+      }
+    },
+    "Bael (Bilva)": {
+      "scientific_name": "Aegle marmelos",
+      "phytochemical": "Scopoletin",
+      "receptor_id": "4FM9",
+      "native_ligand_smiles": "COC1=C(C=C2C(=C1)C=CC(=O)O2)O",
+      "analogs": {
+        "7-O-Methyl Scopoletin": "COC1=CC2=CC(=O)OC2=CC1=O",
+        "Scopolin": "COC1=CC2=CC(=O)OC2=CC1OC1OC(CO)C(O)C(O)C1O",
+        "6-Fluoro Scopoletin": "COC1=CC2=C(F)C(=O)OC2=CC1O",
+        "8-Nitro Scopoletin": "COC1=CC2=CC(=O)OC2=C([N+](=O)[O-])C1O",
+        "Scopoletin amide": "COC1=CC2=CC(N)=OC2=CC1O"
+      }
+    },
+    "Yashtimadhu (Licorice)": {
+      "scientific_name": "Glycyrrhiza glabra",
+      "phytochemical": "Glycyrrhizin",
+      "receptor_id": "1M17",
+      "native_ligand_smiles": "CC1(C2CCC3(C(C2(CCC1OC4C(C(C(C(O4)C(=O)O)O)O)OC5C(C(C(C(O5)C(=O)O)O)O)O)C)C(=O)C=C6C3(CCC7(C6CC(CC7)(C)C(=O)O)C)C)C)C",
+      "analogs": {
+        "Glycyrrhizinic acid aglycone": "OC1CC2(C)C(CCC3C2CCC2(C)C3=CCC2C(=O)O)CC1",
+        "Methyl Glycyrrhizinate": "COC(=O)C1CC2(C)C(CCC3C2CCC2(C)C3=CCC2C(=O)OC)CC1",
+        "18-Fluoro Glycyrrhizin": "OC1CC2(C)C(CCC3C2CCC2(C)C3=CCC2(F)C(=O)O)CC1",
+        "Amino Glycyrrhizin": "OC1CC2(C)C(CCC3C2CCC2(C)C3=CCC2C(=O)O)CC1OC1OC(C(=O)O)C(N)C(O)C1O",
+        "Glycyrrhizin phosphate": "OP(=O)(O)OC1CC2(C)C(CCC3C2CCC2(C)C3=CCC2C(=O)O)CC1"
+      }
+    },
+    "Sarpagandha": {
+      "scientific_name": "Rauvolfia serpentina",
+      "phytochemical": "Reserpine",
+      "receptor_id": "7MJS",
+      "native_ligand_smiles": "COC(=O)C1C2CC3=C(C=CN3)CC2CC(OC(=O)c2cc(OC)c(OC)c(OC)c2)C1OC",
+      "analogs": {
+        "Deserpidine": "COC(=O)C1C2CC3=C(C=CN3)CC2CC(OC(=O)c2cc(OC)c(OC)cc2)C1OC",
+        "N-Methyl Reserpine": "COC(=O)C1C2C[N+]3(C)=C(C=CC3)CC2CC(OC(=O)c2cc(OC)c(OC)c(OC)c2)C1OC",
+        "Fluoro Reserpine": "COC(=O)C1C2CC3=C(C=CN3)CC2CC(OC(=O)c2cc(F)c(OC)c(OC)c2)C1OC",
+        "Reserpine carbamate": "COC(=O)C1C2CC3=C(C=CN3)CC2CC(OC(N)=O)C1OC",
+        "Reserpine phosphate": "COC(=O)C1C2CC3=C(C=CN3)CC2CC(OP(=O)(O)O)C1OC"
+      }
+    },
+    "Kanchanar": {
+      "scientific_name": "Bauhinia variegata",
+      "phytochemical": "Kaempferol",
+      "receptor_id": "1KE5",
+      "native_ligand_smiles": "C1=CC(=CC=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O",
+      "analogs": {
+        "Kaempferol-3-O-glucoside": "C1=CC(=CC=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)OC4OC(CO)C(O)C(O)C4O)O",
+        "8-Prenyl Kaempferol": "CC(=C)Cc1c(O)cc2oc(-c3ccc(O)cc3)c(O)c(=O)c2c1O",
+        "4'-Fluoro Kaempferol": "C1=CC(=CC=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)F",
+        "Rhamnetin": "COc1cc2oc(-c3ccc(O)cc3)c(O)c(=O)c2c(O)c1",
+        "Kaempferol-3-sulfate": "C1=CC(=CC=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)OS(=O)(=O)O)O"
+      }
+    },
+    "Punarnava": {
+      "scientific_name": "Boerhavia diffusa",
+      "phytochemical": "Rosmarinic acid",
+      "receptor_id": "1IKN",
+      "native_ligand_smiles": "C1=CC(=C(C=C1CC(C(=O)O)OC(=O)C=CC2=CC(=C(C=C2)O)O)O)O",
+      "analogs": {
+        "Methyl Rosmarinate": "COC1=C(OC)C=CC(=C1)/C=C/C(=O)OC(Cc1ccc(OC)c(OC)c1)C(=O)O",
+        "3-Fluoro Rosmarinic acid": "OC1=C(F)C=CC(=C1)/C=C/C(=O)OC(Cc1ccc(O)c(O)c1)C(=O)O",
+        "Rosmarinic acid glucoside": "OC1=C(O)C=CC(=C1)/C=C/C(=O)OC(Cc1ccc(OC2OC(CO)C(O)C(O)C2O)c(O)c1)C(=O)O",
+        "Rosmarinic amide": "OC1=C(O)C=CC(=C1)/C=C/C(N)=O",
+        "Rosmarinic phosphate": "OP(=O)(O)OC1=C(O)C=CC(=C1)/C=C/C(=O)OC(Cc1ccc(O)c(O)c1)C(=O)O"
+      }
+    },
+    "Kutaja (Kurchi)": {
+      "scientific_name": "Holarrhena antidysenterica",
+      "phytochemical": "Conessine",
+      "receptor_id": "5L7D",
+      "native_ligand_smiles": "CN(C)CCC1CCC2(C)C(CCC3C2CCC2(C)C3=CC=C2)C1",
+      "analogs": {
+        "Norconessine": "NCCC1CCC2(C)C(CCC3C2CCC2(C)C3=CC=C2)C1",
+        "Conessine N-oxide": "C[N+](C)([O-])CCC1CCC2(C)C(CCC3C2CCC2(C)C3=CC=C2)C1",
+        "Fluoro Conessine": "CN(C)CCC1CCC2(C)C(CCC3C2CCC2(C)C3=CC=C2F)C1",
+        "Conessine glucoside": "CN(C)CCC1CCC2(C)C(CCC3C2CCC2(C)C3=CC=C2OC2OC(CO)C(O)C(O)C2O)C1",
+        "Conessine phosphate": "CN(C)CCC1CCC2(C)C(CCC3C2CCC2(C)C3=CC=C2OP(=O)(O)O)C1"
+      }
+    },
+    "Nisha (Turmeric small)": {
+      "scientific_name": "Berberis aristata",
+      "phytochemical": "Palmatine",
+      "receptor_id": "1K4T",
+      "native_ligand_smiles": "COC1=CC2=C(C=C1OC)C=C[N+]3=C2CC4=CC(=C(C=C43)OC)OC",
+      "analogs": {
+        "N-Propyl Palmatine": "COC1=CC2=C(C=C1OC)C=C[N+]3(CCC)=C2CC4=CC(=C(C=C43)OC)OC",
+        "9-O-Demethyl Palmatine": "COC1=CC2=C(C=C1OC)C=C[N+]3=C2CC4=CC(=C(C=C43)OC)O",
+        "13-Fluoro Palmatine": "COC1=CC2=C(C=C1OC)C=C[N+]3=C2CC4=CC(=C(C=C43F)OC)OC",
+        "Palmatine-methylenedioxy": "COC1=CC2=C(C=C1OC)C=C[N+]3=C2CC4=CC5=C(OCO5)C=C43",
+        "Sulfonyl Palmatine": "COC1=CC2=C(C=C1OC)C=C[N+]3=C2CC4=CC(=C(C=C43)OS(=O)(=O)C)OC"
+      }
+    },
+    "Karanja": {
+      "scientific_name": "Pongamia pinnata",
+      "phytochemical": "Karanjin",
+      "receptor_id": "3EQM",
+      "native_ligand_smiles": "O=c1cc(-c2ccc3c(c2)OCO3)oc2c(OC)c(OC)ccc12",
+      "analogs": {
+        "Demethyl Karanjin": "O=c1cc(-c2ccc3c(c2)OCO3)oc2c(O)c(OC)ccc12",
+        "Fluoro Karanjin": "O=c1cc(-c2ccc3c(c2)OCO3)oc2c(OC)c(OC)c(F)cc12",
+        "Karanjin glucoside": "O=c1cc(-c2ccc3c(c2)OCO3)oc2c(OC1OC1OC(CO)C(O)C(O)C1O)c(OC)ccc12",
+        "Karanjin amide": "NC(=O)c1cc(-c2ccc3c(c2)OCO3)oc2c(OC)c(OC)ccc12",
+        "Sulfonyl Karanjin": "O=c1cc(-c2ccc3c(c2)OCO3)oc2c(OS(=O)(=O)C)c(OC)ccc12"
+      }
+    },
+    "Haldi/Daruharidra (Tree Turmeric)": {
+      "scientific_name": "Curcuma aromatica",
+      "phytochemical": "Curdione",
+      "receptor_id": "3LN1",
+      "native_ligand_smiles": "CC1CCC(=O)CC(=C)C(=O)CC1",
+      "analogs": {
+        "Dihydro Curdione": "CC1CCC(O)CC(=C)C(=O)CC1",
+        "Fluoro Curdione": "CC1CCC(=O)CC(=C)C(=O)CC1F",
+        "CF3 Curdione": "FC(F)(F)C1CCC(=O)CC(=C)C(=O)CC1",
+        "Curdione oxime": "CC1CCC(/C=N/O)CC(=C)C(=O)CC1",
+        "Curdione glucoside": "CC1CCC(OC2OC(CO)C(O)C(O)C2O)CC(=C)C(=O)CC1"
+      }
+    },
+    "Karpura (Camphor Tree)": {
+      "scientific_name": "Cinnamomum camphora",
+      "phytochemical": "Cinnamaldehyde",
+      "receptor_id": "3QFA",
+      "native_ligand_smiles": "C1=CC=C(C=C1)C=CC=O",
+      "analogs": {
+        "Cinnamyl alcohol": "OC/C=C/c1ccccc1",
+        "Cinnamic acid": "OC(=O)/C=C/c1ccccc1",
+        "4-Fluoro Cinnamaldehyde": "O=C/C=C/c1ccc(F)cc1",
+        "Alpha-methyl Cinnamaldehyde": "O=C(/C(=C/c1ccccc1)C)",
+        "Cinnamaldehyde Schiff base": "N(/C=C/c1ccccc1)=C/c1ccccc1"
+      }
+    },
+    "Meshashringi (Gurmar)": {
+      "scientific_name": "Gymnema sylvestre",
+      "phytochemical": "Gymnemagenin",
+      "receptor_id": "1M17",
+      "native_ligand_smiles": "CC1(CC2C3=CCC4C5(CCC(C(C5CCC4(C3(CC(C2(C(C1O)O)CO)O)C)C)(C)CO)O)C)C",
+      "analogs": {
+        "3-Acetyl Gymnemagenin": "OC1C(OC(C)=O)CC2(C)C(CCC3C2CC=C2C3(CCC(=C2)C(=O)O)C)C1",
+        "16-Fluoro Gymnemagenin": "OC1C(O)CC2(C)C(CCC3C2CC=C2C3(CCC(=C2F)C(=O)O)C)C1",
+        "3-Amino Gymnemagenin": "OC1C(N)CC2(C)C(CCC3C2CC=C2C3(CCC(=C2)C(=O)O)C)C1",
+        "Gymnemagenin glucoside": "OC1C(OC2OC(CO)C(O)C(O)C2O)CC2(C)C(CCC3C2CC=C2C3(CCC(=C2)C(=O)O)C)C1",
+        "Gymnemagenin phosphate": "OC1C(OP(=O)(O)O)CC2(C)C(CCC3C2CC=C2C3(CCC(=C2)C(=O)O)C)C1"
+      }
+    },
+    "Rohitaka": {
+      "scientific_name": "Tecomella undulata",
+      "phytochemical": "Rohitukine",
+      "receptor_id": "1KE5",
+      "native_ligand_smiles": "CC1=CC(=O)C2=C(O1)C(=C(C=C2O)O)C3CCN(CC3O)C",
+      "analogs": {
+        "N-Methyl Rohitukine": "CN1CCC2=C(C1=O)C(O)=C(C)C=C2OC",
+        "Fluoro Rohitukine": "OC1=C(C)C=C2C(=C1)C(=O)N(CC2)CCF",
+        "Rohitukine glucoside": "OC1=C(C)C=C2C(=C1)C(=O)N(CC2)CCOC1OC(CO)C(O)C(O)C1O",
+        "Rohitukine amide": "OC1=C(C)C=C2C(=C1)C(=N)N(CC2)CC",
+        "Rohitukine phosphate": "OP(=O)(O)OC1=C(C)C=C2C(=C1)C(=O)N(CC2)CC"
+      }
+    },
+    "Neem (Margosa)": {
+      "scientific_name": "Azadirachta indica",
+      "phytochemical": "Azadirachtin",
+      "receptor_id": "2NXX",
+      "native_ligand_smiles": "CC=C(C)C(=O)OC1CC(C2(COC3C2C14COC(C4C(C3O)(C)C56C7CC(C5(O6)C)C8(C=COC8O7)O)(C(=O)OC)O)C(=O)OC)OC(=O)C",
+      "analogs": {
+        "Dihydro Azadirachtin": "CC1(C(=O)OC)CCC2=C(C1)C(=O)OC2",
+        "Azadirachtinic acid": "CC1(C(=O)O)CCC2=C(C1)C(=O)OC2",
+        "Fluoro Azadirachtin": "CC1(C(=O)OC)CCC2=C(C1F)C(=O)OC2",
+        "Azadirachtin glucoside": "CC1(C(=O)OC1OC1OC(CO)C(O)C(O)C1O)CCC2=C(C1)C(=O)OC2",
+        "Azadirachtin amide": "CC1(C(=N)OC)CCC2=C(C1)C(=O)OC2"
+      }
+    },
+    "Nagkeshar": {
+      "scientific_name": "Mesua ferrea",
+      "phytochemical": "Mesuaferrone",
+      "receptor_id": "1M17",
+      "native_ligand_smiles": "O=C1CC(=O)c2c(O)ccc(O)c2C1=C/c1ccc(O)cc1",
+      "analogs": {
+        "O-Methyl Mesuaferrone": "O=C1CC(=O)c2c(OC)ccc(OC)c2C1=Cc1ccc(O)cc1",
+        "Fluoro Mesuaferrone": "O=C1CC(=O)c2c(O)cc(F)c(O)c2C1=Cc1ccc(O)cc1",
+        "Mesuaferrone glucoside": "O=C1CC(=O)c2c(OC3OC(CO)C(O)C(O)C3O)ccc(O)c2C1=Cc1ccc(O)cc1",
+        "Mesuaferrone phosphate": "O=C1CC(=O)c2c(OP(=O)(O)O)ccc(O)c2C1=Cc1ccc(O)cc1",
+        "Mesuaferrone amide": "NC(=O)C1=CC(=O)c2c(O)ccc(O)c2C1=Cc1ccc(O)cc1"
+      }
+    },
+    "Mulethi (Licorice)": {
+      "scientific_name": "Glycyrrhiza uralensis",
+      "phytochemical": "Isoliquiritigenin",
+      "receptor_id": "3EQM",
+      "native_ligand_smiles": "C1=CC(=CC=C1C=CC(=O)C2=C(C=C(C=C2)O)O)O",
+      "analogs": {
+        "4'-Methoxy Isoliquiritigenin": "COC1=CC=C(/C=C/C(=O)c2ccc(O)cc2O)C=C1",
+        "4-Fluoro Isoliquiritigenin": "OC1=CC=C(/C=C/C(=O)c2ccc(F)cc2O)C=C1",
+        "Isoliquiritigenin glucoside": "OC1=CC=C(/C=C/C(=O)c2ccc(OC3OC(CO)C(O)C(O)C3O)cc2O)C=C1",
+        "Isoliquiritigenin amide": "OC1=CC=C(/C=C/C(N)=O)C=C1",
+        "Isoliquiritigenin phosphate": "OP(=O)(O)OC1=CC=C(/C=C/C(=O)c2ccc(O)cc2O)C=C1"
+      }
+    },
+    "Trikatu (Black Pepper)": {
+      "scientific_name": "Piper nigrum",
+      "phytochemical": "Piperine",
+      "receptor_id": "1E31",
+      "native_ligand_smiles": "C1CCN(CC1)C(=O)C=CC=CC2=CC3=C(C=C2)OCO3",
+      "analogs": {
+        "Piperine-morpholine": "/C(=C/c1ccc2c(c1)OCO2)\\C=C\\C(=O)N1CCOCC1",
+        "Difluoro Piperine": "/C(=C/c1ccc2c(c1)C(F)(F)O2)\\C=C\\C(=O)N1CCCC1",
+        "Dihydropiperine": "O=C(CCCC1=CC=C2C(=C1)OCO2)N1CCCC1",
+        "N-Methyl Piperine": "/C(=C/c1ccc2c(c1)OCO2)\\C=C\\C(=O)[N+]1(C)CCCC1",
+        "5'-Fluoro Piperine": "/C(=C/c1ccc2c(c1F)OCO2)\\C=C\\C(=O)N1CCCC1"
+      }
+    },
+    "Bibhitaki": {
+      "scientific_name": "Terminalia bellirica",
+      "phytochemical": "Gallic acid",
+      "receptor_id": "4FM9",
+      "native_ligand_smiles": "C1=C(C=C(C(=C1O)O)O)C(=O)O",
+      "analogs": {
+        "Methyl gallate": "COC(=O)c1cc(O)c(O)c(O)c1",
+        "Propyl gallate": "CCCOC(=O)c1cc(O)c(O)c(O)c1",
+        "3,4,5-Trimethoxy benzoic acid": "COC1=CC(=CC(=C1OC)OC)C(=O)O",
+        "Galloyl glycine": "OC(=O)CNC(=O)c1cc(O)c(O)c(O)c1",
+        "2-Fluoro Gallic acid": "OC(=O)c1c(F)c(O)c(O)c(O)c1"
+      }
+    },
+    "Hingu (Asafoetida)": {
+      "scientific_name": "Ferula assa-foetida",
+      "phytochemical": "Ferulic acid",
+      "receptor_id": "3LN1",
+      "native_ligand_smiles": "COC1=C(C=CC(=C1)C=CC(=O)O)O",
+      "analogs": {
+        "Methyl ferulate": "COC(=O)/C=C/c1ccc(OC)c(OC)c1",
+        "3-Fluoro Ferulic acid": "OC(=O)/C=C/c1ccc(O)c(F)c1",
+        "Feruloyl glucoside": "OCC1OC(OC(=O)/C=C/c2ccc(O)c(OC)c2)C(O)C(O)C1O",
+        "Ferulamide": "NC(=O)/C=C/c1ccc(O)c(OC)c1",
+        "Ferulic phosphate": "OP(=O)(O)OC(=O)/C=C/c1ccc(O)c(OC)c1"
+      }
+    },
+    "Sarpunkha": {
+      "scientific_name": "Tephrosia purpurea",
+      "phytochemical": "Rutin",
+      "receptor_id": "1M17",
+      "native_ligand_smiles": "CC1C(C(C(C(O1)OCC2C(C(C(C(O2)OC3=C(OC4=CC(=CC(=C4C3=O)O)O)C5=CC(=C(C=C5)O)O)O)O)O)O)O)O",
+      "analogs": {
+        "Quercetin (aglycone)": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)O",
+        "4'-Fluoro Rutin": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)F)OC2OC(CO)C(O)C(O)C2O",
+        "3-O-Methyl Rutin": "COC1=C(C2=CC(=O)C3=C(C=C(C=C3O2)O)O)C=C(O)C(=C1)OC2OC(CO)C(O)C(O)C2O",
+        "Rutin-7-phosphate": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)OP(=O)(O)O)O)O)O)OC2OC(CO)C(O)C(O)C2O",
+        "Amino Rutin": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)OC2OC(CO)C(N)C(O)C2O"
+      }
+    },
+    "Karela (Bitter Melon)": {
+      "scientific_name": "Momordica charantia",
+      "phytochemical": "Momordicin II",
+      "receptor_id": "3V2A",
+      "native_ligand_smiles": "CC1(C)CCC2=C(C1)C(=O)C(O)=C2",
+      "analogs": {
+        "3-Hydroxy Momordicin II": "CC1(C)CCC2=C(C1)C(=O)C(O)=C2O",
+        "4-Fluoro Momordicin II": "CC1(C)CCC2=C(C1)C(=O)C(F)=C2O",
+        "Momordicin II glucoside": "CC1(C)CCC2=C(C1)C(=O)C(OC3OC(CO)C(O)C(O)C3O)=C2O",
+        "O-Methyl Momordicin II": "CC1(C)CCC2=C(C1)C(=O)C(OC)=C2O",
+        "Momordicin II phosphate": "CC1(C)CCC2=C(C1)C(=O)C(OP(=O)(O)O)=C2O"
+      }
+    },
+    "Senna (Sonamukhi)": {
+      "scientific_name": "Senna auriculata",
+      "phytochemical": "Fisetin",
+      "receptor_id": "1K4T",
+      "native_ligand_smiles": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(O2)C=C(C=C3)O)O)O)O",
+      "analogs": {
+        "Fisetin-3-glucoside": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)OC2OC(CO)C(O)C(O)C2O)O)O",
+        "7-O-Methyl Fisetin": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)OC)O)O)O)O",
+        "3'-Fluoro Fisetin": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)F)O",
+        "Fisetin phosphate": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)OP(=O)(O)O)O)O",
+        "Fisetin amide": "C1=CC(=C(C=C1C2=C(C(N)=O)C3=C(C=C(C=C3O2)O)O)O)O"
+      }
+    },
+    "Acorus (Vacha)": {
+      "scientific_name": "Acorus calamus",
+      "phytochemical": "Beta-asarone",
+      "receptor_id": "1NME",
+      "native_ligand_smiles": "COC1=CC(/C=C/C)=CC(=C1OC)OC",
+      "analogs": {
+        "Beta-asarone epoxide": "COC1=CC(C2CO2)=CC(=C1OC)OC",
+        "4-Fluoro Beta-asarone": "COC1=CC(/C=C/C)=CC(=C1OC)F",
+        "Beta-asarone glucoside": "COC1=CC(/C=C/C)=CC(=C1OC)OC1OC(CO)C(O)C(O)C1O",
+        "Beta-asarone amide": "COC1=CC(/C=C/C(N)=O)=CC(=C1OC)OC",
+        "Beta-asarone phosphate": "COC1=CC(/C=C/C)=CC(=C1OC)OP(=O)(O)O"
+      }
+    },
+    "Harmal (Syrian Rue)": {
+      "scientific_name": "Peganum harmala",
+      "phytochemical": "Harmine",
+      "receptor_id": "1KE5",
+      "native_ligand_smiles": "CC1=NC=CC2=C1NC3=C2C=CC(=C3)OC",
+      "analogs": {
+        "N-Methyl Harmine": "CN1C=NC2=CC=CC=C21",
+        "7-Fluoro Harmine": "COC1=CC2=C(C=CN2C)C=C1F",
+        "Harmol": "OC1=CC2=C(C=CN2C)C=C1",
+        "Harmine glucoside": "COC1=CC2=C(C=CN2C)C=C1OC1OC(CO)C(O)C(O)C1O",
+        "Harmine phosphate": "COC1=CC2=C(C=CN2C)C=C1OP(=O)(O)O"
+      }
+    },
+    "Salam Mishri (Salep Orchid)": {
+      "scientific_name": "Dactylorhiza hatagirea",
+      "phytochemical": "Dactylorhizin",
+      "receptor_id": "1G5M",
+      "native_ligand_smiles": "OCC1OC(Oc2ccc(O)cc2)C(O)C(O)C1O",
+      "analogs": {
+        "Dactylorhizin aglycone": "OC1=CC=C(O)C=C1",
+        "Fluoro Dactylorhizin": "OCC1OC(Oc2ccc(F)cc2)C(O)C(O)C1O",
+        "O-Methyl Dactylorhizin": "OCC1OC(Oc2ccc(OC)cc2)C(O)C(O)C1O",
+        "Amino Dactylorhizin": "OCC1OC(Oc2ccc(O)cc2)C(N)C(O)C1O",
+        "Dactylorhizin phosphate": "OCC1OC(Oc2ccc(OP(=O)(O)O)cc2)C(O)C(O)C1O"
+      }
+    },
+    "Katuki (Gentian)": {
+      "scientific_name": "Gentiana kurroo",
+      "phytochemical": "Mangiferin",
+      "receptor_id": "1IKN",
+      "native_ligand_smiles": "C1=C2C(=CC(=C1O)O)OC3=C(C2=O)C(=C(C(=C3)O)C4C(C(C(C(O4)CO)O)O)O)O",
+      "analogs": {
+        "Norathyriol": "OC1=CC2=C(C=C1O)C(=O)C1=C(O2)C(O)=CC(=C1)O",
+        "6-O-Methyl Mangiferin": "OCC1OC(Oc2c(O)cc3oc4cc(O)cc(O)c4c(=O)c3c2O)C(O)C(O)C1OC",
+        "Fluoro Mangiferin": "OCC1OC(Oc2c(O)cc3oc4cc(F)cc(O)c4c(=O)c3c2O)C(O)C(O)C1O",
+        "Amino Mangiferin": "OCC1OC(Oc2c(O)cc3oc4cc(O)cc(O)c4c(=O)c3c2O)C(N)C(O)C1O",
+        "Mangiferin phosphate": "OCC1OC(Oc2c(O)cc3oc4cc(O)cc(O)c4c(=O)c3c2O)C(O)C(OP(=O)(O)O)C1O"
+      }
+    },
+    "Tridax (Coatbuttons)": {
+      "scientific_name": "Tridax procumbens",
+      "phytochemical": "Luteolin",
+      "receptor_id": "6NJS",
+      "native_ligand_smiles": "C1=CC(=C(C=C1C2=CC(=O)C3=C(C=C(C=C3O2)O)O)O)O",
+      "analogs": {
+        "3',4'-Dimethoxy Luteolin": "COC1=C(OC)C=CC(=C1)C2=CC(=O)C3=C(C=C(C=C3O2)O)O",
+        "Luteolin-7-glucuronide": "C1=CC(=C(C=C1C2=CC(=O)C3=C(C=C(C=C3O2)OC4OC(C(=O)O)C(O)C(O)C4O)O)O)O",
+        "6-Prenyl Luteolin": "CC(=C)Cc1c(O)cc2oc(-c3ccc(O)c(O)c3)cc(=O)c2c1O",
+        "5-Fluoro Luteolin": "C1=CC(=C(C=C1C2=CC(=O)C3=C(C=C(C=C3O2)F)O)O)O",
+        "Luteolin-4'-phosphate": "C1=CC(=C(C=C1C2=CC(=O)C3=C(C=C(C=C3O2)O)OP(=O)(O)O)O)O"
+      }
     }
+  },
+  "🟢 Antidiabetic": {
+    "Haridra (Turmeric)": {
+      "scientific_name": "Curcuma longa",
+      "phytochemical": "Bisdemethoxycurcumin",
+      "receptor_id": "3WY1",
+      "native_ligand_smiles": "OC1=CC(=CC=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC=C(O)C=C2",
+      "analogs": {
+        "Dimethoxy Bisdemethoxycurcumin": "COC1=CC(=CC=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC=C(OC)C=C2",
+        "3-Fluoro Bisdemethoxycurcumin": "OC1=CC(=CC=C1F)/C=C/C(=O)CC(=O)/C=C/C2=CC=C(O)C=C2",
+        "Bisdemethoxycurcumin glucoside": "OC1=CC(=CC=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC=C(OC3OC(CO)C(O)C(O)C3O)C=C2",
+        "Hexahydrobisdemethoxycurcumin": "OC1=CC(=CC=C1)CCC(=O)CC(=O)CCC2=CC=C(O)C=C2",
+        "Bisdemethoxycurcumin sulfonate": "OS(=O)(=O)OC1=CC(=CC=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC=C(OS(=O)(=O)O)C=C2"
+      }
+    },
+    "Ashwagandha": {
+      "scientific_name": "Withania somnifera",
+      "phytochemical": "Withanolide D",
+      "receptor_id": "2PRG",
+      "native_ligand_smiles": "CC1(C(=O)C=CC2(C)CCC3C4(CC(O)C(=O)C4(C)CCC3C12)O)O",
+      "analogs": {
+        "4-Methoxy Withanolide D": "CC1(C(=O)C=CC2(C)CCC3C4(CC(O)C(=O)C4(C)CCC3C12)O)OC",
+        "Fluoro Withanolide D": "CC1(C(=O)C=CC2(C)CCC3C4(CC(F)C(=O)C4(C)CCC3C12)O)O",
+        "Withanolide D glucoside": "CC1(C(=O)C=CC2(C)CCC3C4(CC(OC5OC(CO)C(O)C(O)C5O)C(=O)C4(C)CCC3C12)O)O",
+        "2,3-Epoxy Withanolide D": "CC1(C(=O)C=CC2(C)CCC3C4(CC(O)C(=O)C4(C)CCC3C12)O)O",
+        "3-Amino Withanolide D": "CC1(C(=O)C=CC2(C)CCC3C4(CC(N)C(=O)C4(C)CCC3C12)O)O"
+      }
+    },
+    "Guduchi": {
+      "scientific_name": "Tinospora cordifolia",
+      "phytochemical": "Tinosporaside",
+      "receptor_id": "5NN5",
+      "native_ligand_smiles": "OCC1OC(Oc2ccc3c(c2)CC(=O)O3)C(O)C(O)C1O",
+      "analogs": {
+        "Acetyl Tinosporaside": "OCC1OC(Oc2ccc3c(c2)CC(=O)O3)C(OC(C)=O)C(O)C1O",
+        "2'-Fluoro Tinosporaside": "OCC1OC(Oc2ccc3c(c2)CC(=O)O3)C(F)C(O)C1O",
+        "Methyl ester Tinosporaside": "OCC1OC(Oc2ccc3c(c2)CC(=O)OC3)C(O)C(O)C1O",
+        "Hydroxy Tinosporaside": "OCC1OC(Oc2ccc3c(c2O)CC(=O)O3)C(O)C(O)C1O",
+        "Deoxy Tinosporaside": "OCC1OC(Oc2ccc3c(c2)CC(=O)O3)CC(O)C1O"
+      }
+    },
+    "Tulsi (Holy Basil)": {
+      "scientific_name": "Ocimum sanctum",
+      "phytochemical": "Ursolic acid",
+      "receptor_id": "1IRK",
+      "native_ligand_smiles": "CC1CCC2(CCC3(C(=CCC4C3(CCC5C4(CCC(C5(C)C)O)C)C)C2C1C)C)C(=O)O",
+      "analogs": {
+        "3-Acetyl Ursolic acid": "CC1CCC2(CCC3(C)C(CCC4C3(CCC(=C4)C(=O)O)C)C2C1OC(C)=O)C(=O)O",
+        "Ursolic acid amide": "CC1CCC2(CCC3(C)C(CCC4C3(CCC(=C4)C(N)=O)C)C2C1O)C(N)=O",
+        "3-Amino Ursolic acid": "CC1CCC2(CCC3(C)C(CCC4C3(CCC(=C4)C(=O)O)C)C2C1N)C(=O)O",
+        "12-Fluoro Ursolic acid": "CC1CCC2(CCC3(C)C(CCC4C3(CCC(=C4F)C(=O)O)C)C2C1O)C(=O)O",
+        "Ursolic acid-3-glucoside": "CC1CCC2(CCC3(C)C(CCC4C3(CCC(=C4)C(=O)O)C)C2C1OC5OC(CO)C(O)C(O)C5O)C(=O)O"
+      }
+    },
+    "Nimba (Neem)": {
+      "scientific_name": "Azadirachta indica",
+      "phytochemical": "Gedunin",
+      "receptor_id": "1V4S",
+      "native_ligand_smiles": "CC(=O)OC1CC2C(C(=O)C=CC2(C3C1(C45C(O4)C(=O)OC(C5(CC3)C)C6=COC=C6)C)C)(C)C",
+      "analogs": {
+        "Azido Gedunin": "N/A",
+        "Fluoro Gedunin": "N/A",
+        "7-Acetyl Gedunin": "N/A",
+        "Dihydro Gedunin": "N/A",
+        "Gedunin glucoside": "N/A"
+      }
+    },
+    "Gurmar": {
+      "scientific_name": "Gymnema sylvestre",
+      "phytochemical": "Gymnemagenin",
+      "receptor_id": "3WY1",
+      "native_ligand_smiles": "CC1(CC2C3=CCC4C5(CCC(C(C5CCC4(C3(CC(C2(C(C1O)O)CO)O)C)C)(C)CO)O)C)C",
+      "analogs": {
+        "3-Acetyl Gymnemagenin": "OC1C(OC(C)=O)CC2(C)C(CCC3C2CC=C2C3(CCC(=C2)C(=O)O)C)C1",
+        "Gymnemagenin amide": "OC1C(O)CC2(C)C(CCC3C2CC=C2C3(CCC(=C2)C(N)=O)C)C1",
+        "16-Fluoro Gymnemagenin": "OC1C(O)CC2(C)C(CCC3C2CC=C2C3(CCC(=C2F)C(=O)O)C)C1",
+        "Gymnemagenin glucoside": "OC1C(OC2OC(CO)C(O)C(O)C2O)CC2(C)C(CCC3C2CC=C2C3(CCC(=C2)C(=O)O)C)C1",
+        "Methyl Gymnemagenate": "OC1C(O)CC2(C)C(CCC3C2CC=C2C3(CCC(=C2)C(=O)OC)C)C1"
+      }
+    },
+    "Karela (Bitter Gourd)": {
+      "scientific_name": "Momordica charantia",
+      "phytochemical": "Momordicin",
+      "receptor_id": "1IRK",
+      "native_ligand_smiles": "CC1(C)CCC2=C(C1)C(=O)C(=C2)C(C)=C",
+      "analogs": {
+        "3-Hydroxy Momordicin": "CC1(C)CCC2=C(C1)C(=O)C(=C2O)C(C)=C",
+        "CF3 Momordicin": "CC1(C)CCC2=C(C1)C(=O)C(=C2)C(CF3)=C",
+        "Momordicin oxime": "CC1(C)CCC2=C(C1)/C(=N/O)C(=C2)C(C)=C",
+        "Momordicin glucoside": "CC1(C)CCC2=C(C1)C(=O)C(=C2)C(C)=COC3OC(CO)C(O)C(O)C3O",
+        "Dihydro Momordicin": "CC1(C)CCC2=C(C1)C(=O)C(=C2)C(C)C"
+      }
+    },
+    "Jamun (Black Plum)": {
+      "scientific_name": "Syzygium cumini",
+      "phytochemical": "Jambosine",
+      "receptor_id": "1X70",
+      "native_ligand_smiles": "NC(Cc1c[nH]cn1)C(=O)O",
+      "analogs": {
+        "N-Methyl Jambosine": "CNC(Cc1c[nH]cn1)C(=O)O",
+        "Methyl ester Jambosine": "NC(Cc1c[nH]cn1)C(=O)OC",
+        "4-Fluoro Jambosine": "NC(Cc1cnc(F)n1)C(=O)O",
+        "N-Acetyl Jambosine": "CC(=O)NC(Cc1c[nH]cn1)C(=O)O",
+        "Boc-Jambosine": "CC(C)(C)OC(=O)NC(Cc1c[nH]cn1)C(=O)O"
+      }
+    },
+    "Vijaysar": {
+      "scientific_name": "Pterocarpus marsupium",
+      "phytochemical": "Epicatechin",
+      "receptor_id": "1C83",
+      "native_ligand_smiles": "C1C(C(OC2=CC(=CC(=C21)O)O)C3=CC(=C(C=C3)O)O)O",
+      "analogs": {
+        "Epicatechin gallate": "OC1Cc2c(O)cc(O)cc2OC1c1ccc(O)c(O)c1OC(=O)c1cc(O)c(O)c(O)c1",
+        "4'-Fluoro Epicatechin": "OC1Cc2c(O)cc(O)cc2OC1c1ccc(F)c(O)c1",
+        "7-O-Methyl Epicatechin": "OC1Cc2c(O)cc(OC)cc2OC1c1ccc(O)c(O)c1",
+        "Epicatechin-4'-sulfate": "OC1Cc2c(O)cc(O)cc2OC1c1ccc(OS(=O)(=O)O)c(O)c1",
+        "Epicatechin-amino sugar": "OC1Cc2c(O)cc(O)cc2OC1c1ccc(OC2OC(CO)C(O)C(N)C2O)c(O)c1"
+      }
+    },
+    "Haritaki": {
+      "scientific_name": "Terminalia chebula",
+      "phytochemical": "Gallic acid",
+      "receptor_id": "1SMD",
+      "native_ligand_smiles": "C1=C(C=C(C(=C1O)O)O)C(=O)O",
+      "analogs": {
+        "Methyl gallate": "COC(=O)c1cc(O)c(O)c(O)c1",
+        "Propyl gallate": "CCCOC(=O)c1cc(O)c(O)c(O)c1",
+        "3,4,5-Trimethoxy benzoic acid": "COC1=CC(=CC(=C1OC)OC)C(=O)O",
+        "Galloyl glycine": "OC(=O)CNC(=O)c1cc(O)c(O)c(O)c1",
+        "2-Fluoro Gallic acid": "OC(=O)c1c(F)c(O)c(O)c(O)c1"
+      }
+    },
+    "Guggulu": {
+      "scientific_name": "Commiphora mukul",
+      "phytochemical": "Boswellic acid",
+      "receptor_id": "2P54",
+      "native_ligand_smiles": "CC1CCC2(CCC3(C(=CCC4C3(CCC5C4(CCC(C5(C)C(=O)O)O)C)C)C2C1C)C)C",
+      "analogs": {
+        "Acetyl Boswellic acid": "CC(=O)OC1CC2(C)C(CCC3C2CCC2(C)C3=CCC2C(=O)O)C1",
+        "11-Keto Boswellic acid": "OC1CC2(C)C(CCC3C2CC(=O)C2(C)C3=CCC2C(=O)O)C1",
+        "Boswellic acid amide": "OC1CC2(C)C(CCC3C2CCC2(C)C3=CCC2C(N)=O)C1",
+        "23-Fluoro Boswellic acid": "OC1CC2(C)C(CCC3C2CCC2(C)C3=CCC2C(=O)O)C1F",
+        "Boswellic acid glucoside": "OC3OC(CO)C(O)C(O)C3OC1CC2(C)C(CCC3C2CCC2(C)C3=CCC2C(=O)O)C1"
+      }
+    },
+    "Shatavari": {
+      "scientific_name": "Asparagus racemosus",
+      "phytochemical": "Asparagamine A",
+      "receptor_id": "1V4S",
+      "native_ligand_smiles": "NC(CCC(=O)O)C(=O)O",
+      "analogs": {
+        "N-Methyl Asparagamine": "CNC(CCC(=O)O)C(=O)O",
+        "Asparagamine amide": "NC(CCC(N)=O)C(=O)O",
+        "3-Fluoro Asparagamine": "NC(CC(F)C(=O)O)C(=O)O",
+        "Di-methyl ester Asparagamine": "NC(CCC(=O)OC)C(=O)OC",
+        "Sulfonamide Asparagamine": "NS(=O)(=O)NC(CCC(=O)O)C(=O)O"
+      }
+    },
+    "Kalmegh": {
+      "scientific_name": "Andrographis paniculata",
+      "phytochemical": "Neoandrographolide",
+      "receptor_id": "2PRG",
+      "native_ligand_smiles": "CC1(CCC2CC(=C)C(CC2=C1)OC1OC(CO)C(O)C(O)C1O)C=O",
+      "analogs": {
+        "Neoandrographolide aglycone": "CC1(CCC2CC(=C)C(O)(CC2=C1))C=O",
+        "2'-Fluoro Neoandrographolide": "CC1(CCC2CC(=C)C(CC2=C1)OC1OC(CO)C(F)C(O)C1O)C=O",
+        "Acetyl Neoandrographolide": "CC1(CCC2CC(=C)C(CC2=C1)OC1OC(CO)C(OC(C)=O)C(O)C1O)C=O",
+        "Amino Neoandrographolide": "CC1(CCC2CC(=C)C(CC2=C1)OC1OC(CO)C(N)C(O)C1O)C=O",
+        "Alcohol Neoandrographolide": "CC1(CCC2CC(=C)C(CC2=C1)OC1OC(CO)C(O)C(O)C1O)CO"
+      }
+    },
+    "Kutki": {
+      "scientific_name": "Picrorhiza kurroa",
+      "phytochemical": "Picroside II",
+      "receptor_id": "3WY1",
+      "native_ligand_smiles": "COC1=C(C=CC(=C1)C(=O)OC2C3C=COC(C3C4(C2O4)CO)OC5C(C(C(C(O5)CO)O)O)O)O",
+      "analogs": {
+        "O-Methyl Picroside II": "COC1=CC=CC=C1OC1OC(CO)C(O)C(O)C1O",
+        "4-Fluoro Picroside II": "OC1=CC=C(F)C=C1OC1OC(CO)C(O)C(O)C1O",
+        "Picroside II aglycone": "OC1=CC=CC=C1O",
+        "Acetyl Picroside II": "CC(=O)OC1=CC=CC=C1OC1OC(CO)C(O)C(O)C1O",
+        "Amino Picroside II": "OC1=CC=CC=C1OC1OC(CO)C(N)C(O)C1O"
+      }
+    },
+    "Shigru (Moringa)": {
+      "scientific_name": "Moringa oleifera",
+      "phytochemical": "Isothiocyanate (Moringin)",
+      "receptor_id": "7VSI",
+      "native_ligand_smiles": "S=C=NCCc1ccc(OC(=O)O)cc1",
+      "analogs": {
+        "Moringin thiourea": "NC(=S)NCCc1ccc(OC(=O)O)cc1",
+        "Fluoro Moringin": "S=C=NCCc1ccc(OC(=O)F)cc1",
+        "Moringin glucoside": "S=C=NCCc1ccc(OC2OC(CO)C(O)C(O)C2O)cc1",
+        "Homo Moringin": "S=C=NCCCc1ccc(OC(=O)O)cc1",
+        "N-Methyl Moringin": "S=C=N(C)CCc1ccc(OC(=O)O)cc1"
+      }
+    },
+    "Methika (Fenugreek)": {
+      "scientific_name": "Trigonella foenum-graecum",
+      "phytochemical": "Trigonelline",
+      "receptor_id": "5NX2",
+      "native_ligand_smiles": "C[N+]1=CC=CC(=C1)C(=O)[O-]",
+      "analogs": {
+        "N-Methyl Trigonelline": "C[n+]1cccc(C(=O)O)c1",
+        "Methyl ester Trigonelline": "O=C(OC)c1ccc[n+](C)c1",
+        "5-Fluoro Trigonelline": "O=C(O)c1cc(F)cc[n+]1C",
+        "Trigonelline amide": "NC(=O)c1ccc[n+](C)c1",
+        "Nicotinamide analog": "NC(=O)c1ccncc1"
+      }
+    },
+    "Amalaki (Amla)": {
+      "scientific_name": "Phyllanthus emblica",
+      "phytochemical": "Gallic acid",
+      "receptor_id": "5NN5",
+      "native_ligand_smiles": "C1=C(C=C(C(=C1O)O)O)C(=O)O",
+      "analogs": {
+        "Methyl gallate": "COC(=O)c1cc(O)c(O)c(O)c1",
+        "Propyl gallate": "CCCOC(=O)c1cc(O)c(O)c(O)c1",
+        "3,4,5-Trimethoxy benzoic acid": "COC1=CC(=CC(=C1OC)OC)C(=O)O",
+        "Galloyl glycine": "OC(=O)CNC(=O)c1cc(O)c(O)c(O)c1",
+        "2-Fluoro Gallic acid": "OC(=O)c1c(F)c(O)c(O)c(O)c1"
+      }
+    },
+    "Pippali (Long Pepper)": {
+      "scientific_name": "Piper longum",
+      "phytochemical": "Piperlongumine",
+      "receptor_id": "6NJS",
+      "native_ligand_smiles": "COC1=C(OC)C=CC(=C1)/C=C/C(=O)N1CCC=CC1=O",
+      "analogs": {
+        "Difluoro Piperlongumine": "COC1=C(OC)C=CC(=C1)/C=C/C(=O)N1CCC=CC1=O",
+        "Dihydro Piperlongumine": "COC1=C(OC)C=CC(=C1)CCC(=O)N1CCC=CC1=O",
+        "N-Methyl Piperlongumine": "COC1=C(OC)C=CC(=C1)/C=C/C(=O)[N+]1(C)CCC=CC1=O",
+        "3'-Fluoro Piperlongumine": "COC1=C(OC)C=CC(=C1F)/C=C/C(=O)N1CCC=CC1=O",
+        "Amino Piperlongumine": "COC1=C(OC)C=CC(=C1)/C=C/C(=O)N1CCC(N)=CC1=O"
+      }
+    },
+    "Shunthi (Ginger)": {
+      "scientific_name": "Zingiber officinale",
+      "phytochemical": "Paradol",
+      "receptor_id": "2Y94",
+      "native_ligand_smiles": "CCCCC(=O)CCc1ccc(O)c(OC)c1",
+      "analogs": {
+        "Paradol oxime": "CCCCC(/C=N/O)CCc1ccc(O)c(OC)c1",
+        "1-Fluoro Paradol": "CCCCC(=O)CCc1ccc(O)c(OC)c1F",
+        "O-Methyl Paradol": "CCCCC(=O)CCc1ccc(OC)c(OC)c1",
+        "Paradol alcohol": "CCCCC(O)CCc1ccc(O)c(OC)c1",
+        "Paradol glucoside": "CCCCC(=O)CCc1ccc(OC2OC(CO)C(O)C(O)C2O)c(OC)c1"
+      }
+    },
+    "Kala Jeera (Black Seed)": {
+      "scientific_name": "Nigella sativa",
+      "phytochemical": "Thymol",
+      "receptor_id": "2PRG",
+      "native_ligand_smiles": "CC1=CC(=C(C=C1)C(C)C)O",
+      "analogs": {
+        "Thymol acetate": "CC(C)c1ccc(C)cc1OC(C)=O",
+        "Nitro Thymol": "CC(C)c1ccc(C)cc1O[N+](=O)[O-]",
+        "Thymol glucoside": "CC(C)c1ccc(C)cc1OC1OC(CO)C(O)C(O)C1O",
+        "Thymol carbamate": "CC(C)c1ccc(C)cc1OC(N)=O",
+        "4-Fluoro Thymol": "CC(C)c1cc(F)c(C)cc1O"
+      }
+    },
+    "Chirayata": {
+      "scientific_name": "Swertia chirayita",
+      "phytochemical": "Swertiamarin",
+      "receptor_id": "3WY1",
+      "native_ligand_smiles": "C=CC1C(OC=C2C1(CCOC2=O)O)OC3C(C(C(C(O3)CO)O)O)O",
+      "analogs": {
+        "Swertiamarin aglycone": "OCC1=CC2=CC(=O)OC2CO1",
+        "2'-Fluoro Swertiamarin": "OCC1OC(OC2=CC3=CC(=O)OC3CO2)C(F)C(O)C1O",
+        "Acetyl Swertiamarin": "OCC1OC(OC2=CC3=CC(=O)OC3CO2)C(OC(C)=O)C(O)C1O",
+        "Amino Swertiamarin": "OCC1OC(OC2=CC3=CC(=O)OC3CO2)C(N)C(O)C1O",
+        "Swertiamarin phosphate": "OP(=O)(O)OCC1OC(OC2=CC3=CC(=O)OC3CO2)C(O)C(O)C1O"
+      }
+    },
+    "Resveratrol Plant (Grape)": {
+      "scientific_name": "Vitis vinifera",
+      "phytochemical": "Quercetin",
+      "receptor_id": "2P54",
+      "native_ligand_smiles": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)O",
+      "analogs": {
+        "Isorhamnetin (3-O-methyl Quercetin)": "COC1=C(C2=CC(=O)C3=C(C=C(C=C3O2)O)O)C=C(O)C(=C1)O",
+        "Quercetin-7-glucoside": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)OC4OC(CO)C(O)C(O)C4O)O)O)O)O",
+        "3'-Fluoro Quercetin": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)F)O",
+        "8-Prenyl Quercetin": "CC(=C)CC1=C(O)C=C2C(=C1)OC(=C(C2=O)O)C1=CC(=C(O)C(=C1)O)O",
+        "Quercetin-3-phosphate": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)OP(=O)(O)O)O)O)O"
+      }
+    },
+    "Plumbago (Chitrak)": {
+      "scientific_name": "Plumbago zeylanica",
+      "phytochemical": "Luteolin",
+      "receptor_id": "1V4S",
+      "native_ligand_smiles": "C1=CC(=C(C=C1C2=CC(=O)C3=C(C=C(C=C3O2)O)O)O)O",
+      "analogs": {
+        "3',4'-Dimethoxy Luteolin": "COC1=C(OC)C=CC(=C1)C2=CC(=O)C3=C(C=C(C=C3O2)O)O",
+        "Luteolin-7-glucuronide": "C1=CC(=C(C=C1C2=CC(=O)C3=C(C=C(C=C3O2)OC4OC(C(=O)O)C(O)C(O)C4O)O)O)O",
+        "6-Prenyl Luteolin": "CC(=C)Cc1c(O)cc2oc(-c3ccc(O)c(O)c3)cc(=O)c2c1O",
+        "5-Fluoro Luteolin": "C1=CC(=C(C=C1C2=CC(=O)C3=C(C=C(C=C3O2)F)O)O)O",
+        "Luteolin-4'-phosphate": "C1=CC(=C(C=C1C2=CC(=O)C3=C(C=C(C=C3O2)O)OP(=O)(O)O)O)O"
+      }
+    },
+    "Centella (Mandukparni)": {
+      "scientific_name": "Centella asiatica",
+      "phytochemical": "Madecassoside",
+      "receptor_id": "2PRG",
+      "native_ligand_smiles": "OCC1OC(OC2CCC3(C)C(CCC4C3CCC3(C)C4=CCC3(O)C(=O)O)C2)C(OC2OC(CO)C(O)C(O)C2O)C(O)C1O",
+      "analogs": {
+        "Madecassic acid": "OC1CCC2(C)C(CCC3C2CCC2(C)C3=CCC2(O)C(=O)O)C1",
+        "Fluoro Madecassoside": "OCC1OC(OC2CCC3(C)C(CCC4C3CCC3(C)C4=CCC3(O)C(=O)O)C2)C(F)C(O)C1O",
+        "Acetyl Madecassoside": "OCC1OC(OC2CCC3(C)C(CCC4C3CCC3(C)C4=CCC3(O)C(=O)O)C2)C(OC(C)=O)C(O)C1O",
+        "Madecassoside phosphate": "OP(=O)(O)OCC1OC(OC2CCC3(C)C(CCC4C3CCC3(C)C4=CCC3(O)C(=O)O)C2)C(O)C(O)C1O",
+        "Amino Madecassoside": "OCC1OC(OC2CCC3(C)C(CCC4C3CCC3(C)C4=CCC3(O)C(=O)O)C2)C(N)C(O)C1O"
+      }
+    },
+    "Bael (Bilva)": {
+      "scientific_name": "Aegle marmelos",
+      "phytochemical": "Lupeol",
+      "receptor_id": "2PRG",
+      "native_ligand_smiles": "CC(=C)C1CCC2(C1C3CCC4C5(CCC(C(C5CCC4(C3(CC2)C)C)(C)C)O)C)C",
+      "analogs": {
+        "Lupeol acetate": "CC(=C)C1CCC2(C1CCC3C2CCC4(C3(CCC(=C4)C(=O)O)C)C)C",
+        "Betulinic acid": "CC(=C)C1CCC2(C1CCC3C2CCC4(C3(CCC(=C4)C(=O)O)C)C(=O)O)C",
+        "Lupeol epoxide": "CC1(CO1)C1CCC2(C1CCC1C2CCC3(C1(CCC(=C3)C(=O)O)C)C)C",
+        "Lupeol-3-phosphate": "CC(=C)C1CCC2(C1CCC3C2CCC4(C3(CCC(=C4)C(=O)O)C)C)COP(=O)(O)O",
+        "2-Hydroxy Lupeol": "CC(=C)C1CCC2(C1CCC3C2CCC4(C3(CCC(=C4)C(=O)O)C)C)C(O)"
+      }
+    },
+    "Yashtimadhu (Licorice)": {
+      "scientific_name": "Glycyrrhiza glabra",
+      "phytochemical": "Liquiritigenin",
+      "receptor_id": "1IRK",
+      "native_ligand_smiles": "C1C(OC2=C(C1=O)C=CC(=C2)O)C3=CC=C(C=C3)O",
+      "analogs": {
+        "Liquiritin": "OC1=CC=CC=C1OC1OC(CO)C(O)C(O)C1O",
+        "4'-Methoxy Liquiritigenin": "COC1=CC=CC(=C1)C2CC(=O)C3=CC=CC(O)=C3O2",
+        "3-Fluoro Liquiritigenin": "OC1=CC=C(F)C=C1C2CC(=O)C3=CC=CC(O)=C3O2",
+        "Liquiritigenin amide": "NC(=O)C1=CC=CC(O)=C1OC1CC(=O)C2=CC=CC(O)=C2O1",
+        "Liquiritigenin phosphate": "OP(=O)(O)OC1=CC=CC(=C1)C2CC(=O)C3=CC=CC(O)=C3O2"
+      }
+    },
+    "Kanchanar": {
+      "scientific_name": "Bauhinia variegata",
+      "phytochemical": "Apigenin",
+      "receptor_id": "1X70",
+      "native_ligand_smiles": "C1=CC(=CC=C1C2=CC(=O)C3=C(C=C(C=C3O2)O)O)O",
+      "analogs": {
+        "Apigenin-7-glucoside": "C1=CC(=CC=C1C2=CC(=O)C3=C(C=C(C=C3O2)OC4OC(CO)C(O)C(O)C4O)O)O",
+        "Dimethoxyapigenin": "COC1=C(OC)C=CC(=C1)C2=CC(=O)C3=C(C=C(C=C3O2)O)O",
+        "6-Bromo Apigenin": "C1=CC(=CC=C1C2=CC(=O)C3=C(C=C(C=C3O2)O)O)O",
+        "3-Hydroxy Apigenin (Kaempferol)": "C1=CC(=CC=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O",
+        "Apigenin-GlcNAc": "C1=CC(=CC=C1C2=CC(=O)C3=C(C=C(C=C3O2)OC4OC(CO)C(O)C(NC(C)=O)C4O)O)O"
+      }
+    },
+    "Punarnava": {
+      "scientific_name": "Boerhavia diffusa",
+      "phytochemical": "Liriodendrin",
+      "receptor_id": "7VSI",
+      "native_ligand_smiles": "COC1=C(OC)C=CC(=C1)C1OCC2=CC(=CC=C12)OC1OC(CO)C(O)C(O)C1O",
+      "analogs": {
+        "Liriodendrin aglycone": "COC1=C(OC)C=CC(=C1)C1OCC2=CC(=CC=C12)O",
+        "Fluoro Liriodendrin": "COC1=C(OC)C=CC(=C1)C1OCC2=CC(=CC=C12F)OC1OC(CO)C(O)C(O)C1O",
+        "O-Methyl Liriodendrin": "COC1=C(OC)C=CC(=C1)C1OCC2=CC(=CC=C12)OC1OC(CO)C(OC)C(O)C1O",
+        "Liriodendrin phosphate": "COC1=C(OC)C=CC(=C1)C1OCC2=CC(=CC=C12)OC1OC(CO)C(O)C(O)C1OP(=O)(O)O",
+        "Amino Liriodendrin": "COC1=C(OC)C=CC(=C1)C1OCC2=CC(=CC=C12)OC1OC(CO)C(N)C(O)C1O"
+      }
+    },
+    "Sarpagandha (Indian Snakeroot)": {
+      "scientific_name": "Rauvolfia serpentina",
+      "phytochemical": "Ajmaline",
+      "receptor_id": "1V4S",
+      "native_ligand_smiles": "OC1C2CC3=C(C=CN3)CC2CC1N(C)C",
+      "analogs": {
+        "N-Methyl Ajmaline": "OC1C2CC3=C(C=CN3)CC2CC1N(C)CC",
+        "Acetyl Ajmaline": "CC(=O)OC1C2CC3=C(C=CN3)CC2CC1N(C)C",
+        "Fluoro Ajmaline": "OC1C2CC3=C(C=CN3)CC2CC1N(C)CF",
+        "Ajmaline phosphate": "OP(=O)(O)OC1C2CC3=C(C=CN3)CC2CC1N(C)C",
+        "Amino Ajmaline": "OC1C2CC3=C(C=CN3)CC2CC1N(C)CN"
+      }
+    },
+    "Nisha (Turmeric small)": {
+      "scientific_name": "Berberis aristata",
+      "phytochemical": "Berberine",
+      "receptor_id": "2Y94",
+      "native_ligand_smiles": "COC1=C(C2=C[N+]3=C(C=C2C=C1)C4=CC5=C(C=C4CC3)OCO5)OC",
+      "analogs": {
+        "N-Propargyl Berberine": "COC1=C(C2=C[N+]3(CC#C)=C(C=C2C=C1)C4=CC5=C(C=C4CC3)OCO5)OC",
+        "9-Hydroxyberberine": "COC1=C(C2=C[N+]3=C(C=C2C=C1)C4=CC5=C(C=C4CC3)OCO5)O",
+        "13-Fluoroberberine": "COC1=C(C2=C[N+]3=C(C=C2C=C1)C4=CC5=C(C=C4CC3F)OCO5)OC",
+        "Difluoro Berberine": "COC1=C(C2=C[N+]3=C(C=C2C=C1)C4=CC5=C(C=C4CC3)C(F)(F)O5)OC",
+        "N-Benzyl Berberine salt": "COC1=C(C2=C[N+]3(Cc4ccccc4)=C(C=C2C=C1)C4=CC5=C(C=C4CC3)OCO5)OC.[Br-]"
+      }
+    },
+    "Karanja": {
+      "scientific_name": "Pongamia pinnata",
+      "phytochemical": "Pongamol",
+      "receptor_id": "3WY1",
+      "native_ligand_smiles": "O=C1CC(=O)c2c(OC)ccc3c2C1=CC=C3",
+      "analogs": {
+        "O-Methyl Pongamol": "O=C1CC(=O)c2c(OC)ccc3c2C1=CC=C3",
+        "Fluoro Pongamol": "O=C1CC(=O)c2c(OC)cc(F)c3c2C1=CC=C3",
+        "Pongamol glucoside": "O=C1CC(=O)c2c(OC1OC1OC(CO)C(O)C(O)C1O)ccc3c2C1=CC=C3",
+        "Pongamol oxime": "ONC1=CC(=O)c2c(OC)ccc3c2C1=CC=C3",
+        "Pongamol phosphate": "O=C1CC(=O)c2c(OP(=O)(O)O)ccc3c2C1=CC=C3"
+      }
+    },
+    "Karpura (Camphor Tree)": {
+      "scientific_name": "Cinnamomum camphora",
+      "phytochemical": "Linalool",
+      "receptor_id": "2PRG",
+      "native_ligand_smiles": "CC(=CCCC(C)(C=C)O)C",
+      "analogs": {
+        "Linalyl acetate": "CC(=C)CCC(CC=C)(OC(C)=O)C",
+        "Linalool epoxide": "CC(=C)CCC1(CC=C)OC1C",
+        "Fluoro Linalool": "CC(=C)CCC(CC=C)(F)CO",
+        "Linalool phosphate": "CC(=C)CCC(CC=C)(OP(=O)(O)O)C",
+        "Linalool glucoside": "CC(=C)CCC(CC=C)(OC1OC(CO)C(O)C(O)C1O)C"
+      }
+    },
+    "Dalchini (Cinnamon)": {
+      "scientific_name": "Cinnamomum verum",
+      "phytochemical": "Cinnamic acid",
+      "receptor_id": "4ZWC",
+      "native_ligand_smiles": "C1=CC=C(C=C1)C=CC(=O)O",
+      "analogs": {
+        "p-Coumaric acid": "OC(=O)/C=C/c1ccc(O)cc1",
+        "4-Fluoro Cinnamic acid": "OC(=O)/C=C/c1ccc(F)cc1",
+        "Cinnamamide": "NC(=O)/C=C/c1ccccc1",
+        "Methyl cinnamate": "COC(=O)/C=C/c1ccccc1",
+        "Cinnamoyl glucoside": "OCC1OC(OC(=O)/C=C/c2ccccc2)C(O)C(O)C1O"
+      }
+    },
+    "Tejpatra (Bay Leaf)": {
+      "scientific_name": "Cinnamomum tamala",
+      "phytochemical": "Eugenol",
+      "receptor_id": "1SMD",
+      "native_ligand_smiles": "COC1=C(C=CC(=C1)CC=C)O",
+      "analogs": {
+        "Isoeugenol epoxide": "C1OC1Cc1ccc(O)c(OC)c1",
+        "Eugenol acetate": "C=CCc1ccc(OC(C)=O)c(OC)c1",
+        "O-Ethyl Eugenol": "C=CCc1ccc(O)c(OCC)c1",
+        "Propargyl Eugenol": "C#CCc1ccc(O)c(OC)c1",
+        "4-Nitro Eugenol": "C=CCc1cc([N+](=O)[O-])c(OC)c(O)c1"
+      }
+    },
+    "Methi (Fenugreek)": {
+      "scientific_name": "Trigonella foenum-graecum",
+      "phytochemical": "4-Hydroxyisoleucine",
+      "receptor_id": "5NX2",
+      "native_ligand_smiles": "CC(O)C(N)C(=O)O",
+      "analogs": {
+        "N-Acetyl 4-Hydroxyisoleucine": "CC(O)C(NC(C)=O)C(=O)O",
+        "Methyl ester 4-Hydroxyisoleucine": "CC(O)C(N)C(=O)OC",
+        "4-Fluoro Isoleucine": "CC(F)C(N)C(=O)O",
+        "4-Phospho Hydroxyisoleucine": "CC(OP(=O)(O)O)C(N)C(=O)O",
+        "Sulfonamide Hydroxyisoleucine": "CC(O)C(NS(=O)(=O)c1ccccc1)C(=O)O"
+      }
+    },
+    "Palash (Flame of Forest)": {
+      "scientific_name": "Butea monosperma",
+      "phytochemical": "Butein",
+      "receptor_id": "1C83",
+      "native_ligand_smiles": "OC1=CC=C(/C=C/C(=O)C2=CC(=C(O)C=C2)O)C=C1",
+      "analogs": {
+        "Methoxy Butein": "COC1=CC=C(/C=C/C(=O)C2=CC(=C(OC)C=C2)OC)C=C1",
+        "4-Fluoro Butein": "OC1=CC=C(/C=C/C(=O)C2=CC(=C(O)C=C2)F)C=C1",
+        "Butein glucoside": "OC1=CC=C(/C=C/C(=O)C2=CC(=C(OC3OC(CO)C(O)C(O)C3O)C=C2)O)C=C1",
+        "Butein amide": "OC1=CC=C(/C=C/C(N)=O)C=C1",
+        "Butein phosphate": "OP(=O)(O)OC1=CC=C(/C=C/C(=O)C2=CC(=C(O)C=C2)O)C=C1"
+      }
+    },
+    "Nagkeshar": {
+      "scientific_name": "Mesua ferrea",
+      "phytochemical": "Mesuol",
+      "receptor_id": "1X70",
+      "native_ligand_smiles": "OC1=CC=C2C(=C1)C(=O)c1ccc(O)cc1C2=O",
+      "analogs": {
+        "O-Methyl Mesuol": "COC1=CC=C2C(=C1)C(=O)c1ccc(OC)cc1C2=O",
+        "Fluoro Mesuol": "OC1=CC=C2C(=C1F)C(=O)c1ccc(O)cc1C2=O",
+        "Mesuol glucoside": "OC1=CC=C2C(=C1)C(=O)c1ccc(OC3OC(CO)C(O)C(O)C3O)cc1C2=O",
+        "Mesuol phosphate": "OP(=O)(O)OC1=CC=C2C(=C1)C(=O)c1ccc(O)cc1C2=O",
+        "Mesuol amide": "NC(=O)C1=CC=C2C(=C1)C(=O)c1ccc(O)cc1C2=O"
+      }
+    },
+    "Bibhitaki": {
+      "scientific_name": "Terminalia bellirica",
+      "phytochemical": "Chebulagic acid",
+      "receptor_id": "5NN5",
+      "native_ligand_smiles": "OC1=C(O)C=C2C(=C1)C(=O)OC2C1OC(=O)C2=C(O)C(O)=C(O)C=C2C1OC(=O)c1cc(O)c(O)c(O)c1",
+      "analogs": {
+        "Methyl chebulagate": "COC1=C(OC)C=C2C(=C1)C(=O)OC2C1OC(=O)C2=C(O)C(O)=C(O)C=C2C1OC(=O)c1cc(O)c(O)c(O)c1",
+        "Fluoro Chebulagic acid": "OC1=C(O)C=C2C(=C1F)C(=O)OC2C1OC(=O)C2=C(O)C(O)=C(O)C=C2C1OC(=O)c1cc(O)c(O)c(O)c1",
+        "Amino Chebulagic acid": "OC1=C(O)C=C2C(=C1)C(=O)OC2C1OC(=O)C2=C(O)C(O)=C(O)C=C2C1NC(=O)c1cc(O)c(O)c(O)c1",
+        "Chebulagic phosphate": "OP(=O)(O)OC1=C(O)C=C2C(=C1)C(=O)OC2C1OC(=O)C2=C(O)C(O)=C(O)C=C2C1OC(=O)c1cc(O)c(O)c(O)c1",
+        "Chebulagic glucoside": "OC1=C(O)C=C2C(=C1)C(=O)OC2C1OC(=O)C2=C(O)C(O)=C(O)C=C2C1OC(=O)c1cc(OC3OC(CO)C(O)C(O)C3O)c(O)c(O)c1"
+      }
+    },
+    "Hingu (Asafoetida)": {
+      "scientific_name": "Ferula assa-foetida",
+      "phytochemical": "Umbelliferone",
+      "receptor_id": "3WY1",
+      "native_ligand_smiles": "C1=CC(=CC2=C1C=CC(=O)O2)O",
+      "analogs": {
+        "Skimmin": "O=c1ccc2ccc(OC3OC(CO)C(O)C(O)C3O)cc2o1",
+        "Herniarin": "O=c1ccc2ccc(OC)cc2o1",
+        "6-Fluoro Umbelliferone": "O=c1ccc2cc(F)c(O)cc2o1",
+        "Umbelliferone phosphate": "O=c1ccc2ccc(OP(=O)(O)O)cc2o1",
+        "Umbelliferone amide": "O=C(N)C=Cc1ccc(O)cc1=O"
+      }
+    },
+    "Sarpunkha": {
+      "scientific_name": "Tephrosia purpurea",
+      "phytochemical": "Quercetin",
+      "receptor_id": "2PRG",
+      "native_ligand_smiles": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)O",
+      "analogs": {
+        "Isorhamnetin (3-O-methyl Quercetin)": "COC1=C(C2=CC(=O)C3=C(C=C(C=C3O2)O)O)C=C(O)C(=C1)O",
+        "Quercetin-7-glucoside": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)OC4OC(CO)C(O)C(O)C4O)O)O)O)O",
+        "3'-Fluoro Quercetin": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)F)O",
+        "8-Prenyl Quercetin": "CC(=C)CC1=C(O)C=C2C(=C1)OC(=C(C2=O)O)C1=CC(=C(O)C(=C1)O)O",
+        "Quercetin-3-phosphate": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)OP(=O)(O)O)O)O)O"
+      }
+    },
+    "Arjuna Tree": {
+      "scientific_name": "Terminalia arjuna",
+      "phytochemical": "Luteolin",
+      "receptor_id": "1SMD",
+      "native_ligand_smiles": "C1=CC(=C(C=C1C2=CC(=O)C3=C(C=C(C=C3O2)O)O)O)O",
+      "analogs": {
+        "3',4'-Dimethoxy Luteolin": "COC1=C(OC)C=CC(=C1)C2=CC(=O)C3=C(C=C(C=C3O2)O)O",
+        "Luteolin-7-glucuronide": "C1=CC(=C(C=C1C2=CC(=O)C3=C(C=C(C=C3O2)OC4OC(C(=O)O)C(O)C(O)C4O)O)O)O",
+        "6-Prenyl Luteolin": "CC(=C)Cc1c(O)cc2oc(-c3ccc(O)c(O)c3)cc(=O)c2c1O",
+        "5-Fluoro Luteolin": "C1=CC(=C(C=C1C2=CC(=O)C3=C(C=C(C=C3O2)F)O)O)O",
+        "Luteolin-4'-phosphate": "C1=CC(=C(C=C1C2=CC(=O)C3=C(C=C(C=C3O2)O)OP(=O)(O)O)O)O"
+      }
+    },
+    "Senna (Sonamukhi)": {
+      "scientific_name": "Senna auriculata",
+      "phytochemical": "Kaempferol",
+      "receptor_id": "3WY1",
+      "native_ligand_smiles": "C1=CC(=CC=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O",
+      "analogs": {
+        "Kaempferol-3-O-glucoside": "C1=CC(=CC=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)OC4OC(CO)C(O)C(O)C4O)O)O",
+        "8-Prenyl Kaempferol": "CC(=C)Cc1c(O)cc2oc(-c3ccc(O)cc3)c(O)c(=O)c2c1O",
+        "4'-Fluoro Kaempferol": "C1=CC(=CC=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)F",
+        "Rhamnetin": "COc1cc2oc(-c3ccc(O)cc3)c(O)c(=O)c2c(O)c1",
+        "Kaempferol-3-sulfate": "C1=CC(=CC=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)OS(=O)(=O)O)O)O"
+      }
+    },
+    "Acorus (Vacha)": {
+      "scientific_name": "Acorus calamus",
+      "phytochemical": "Alpha-asarone",
+      "receptor_id": "2Y94",
+      "native_ligand_smiles": "COC1=CC(/C=C/C)=CC(=C1OC)OC",
+      "analogs": {
+        "Alpha-asarone epoxide": "COC1=CC(C2CO2)=CC(=C1OC)OC",
+        "Fluoro Alpha-asarone": "COC1=CC(/C=C/CF)=CC(=C1OC)OC",
+        "Alpha-asarone glucoside": "COC1=CC(/C=C/COC2OC(CO)C(O)C(O)C2O)=CC(=C1OC)OC",
+        "Dihydro Alpha-asarone": "COC1=CC(CCC)=CC(=C1OC)OC",
+        "Alpha-asarone phosphate": "COC1=CC(/C=C/COP(=O)(O)O)=CC(=C1OC)OC"
+      }
+    },
+    "Harmal (Syrian Rue)": {
+      "scientific_name": "Peganum harmala",
+      "phytochemical": "Harmaline",
+      "receptor_id": "2V5Z",
+      "native_ligand_smiles": "CC1=NCCC2=C1NC3=C2C=CC(=C3)OC",
+      "analogs": {
+        "N-Methyl Harmaline": "CN1CCC2=CC(OC)=CC3=C2C1=CN3",
+        "7-Fluoro Harmaline": "COC1=CC2=C(C=C1F)C1=C(CCN1C)N2",
+        "Norharmaline": "OC1=CC2=C(C=C1)C1=C(CCN1C)N2",
+        "Harmaline glucoside": "COC1=CC2=C(C=C1)C1=C(CCN1C)N2OC1OC(CO)C(O)C(O)C1O",
+        "Harmaline phosphate": "COC1=CC2=C(C=C1)C1=C(CCN1C)N2OP(=O)(O)O"
+      }
+    },
+    "Salam Mishri (Salep Orchid)": {
+      "scientific_name": "Dactylorhiza hatagirea",
+      "phytochemical": "Glucomannan",
+      "receptor_id": "5NX2",
+      "native_ligand_smiles": "OCC1OC(OC2C(O)C(O)C(O)OC2CO)C(O)C(O)C1O",
+      "analogs": {
+        "Deacetyl Glucomannan": "OCC1OC(OC2C(O)C(O)C(O)OC2CO)C(O)C(O)C1O",
+        "Fluoro Glucomannan": "OCC1OC(OC2C(F)C(O)C(O)OC2CO)C(O)C(O)C1O",
+        "Amino Glucomannan": "OCC1OC(OC2C(N)C(O)C(O)OC2CO)C(O)C(O)C1O",
+        "Glucomannan phosphate": "OCC1OC(OC2C(O)C(O)C(OP(=O)(O)O)OC2CO)C(O)C(O)C1O",
+        "O-Methyl Glucomannan": "OCC1OC(OC2C(OC)C(O)C(O)OC2CO)C(O)C(O)C1O"
+      }
+    },
+    "Katuki (Gentian)": {
+      "scientific_name": "Gentiana kurroo",
+      "phytochemical": "Amarogentin",
+      "receptor_id": "5NN5",
+      "native_ligand_smiles": "C=CC1C2CCOC(=O)C2=COC1OC3C(C(C(C(O3)CO)O)O)OC(=O)C4=C(C=C(C=C4O)O)C5=CC(=CC=C5)O",
+      "analogs": {
+        "Amarogentin aglycone": "OC1=CC=CC(=C1)C(=O)OC1=CC=CC(=C1)O",
+        "O-Methyl Amarogentin": "COC1=CC=CC(=C1)C(=O)OC1=CC=CC(=C1)OC",
+        "3-Fluoro Amarogentin": "OC1=CC=C(F)C(=C1)C(=O)OC1=CC=CC(=C1)O",
+        "Amarogentin amide": "OC1=CC=CC(=C1)C(=N)OC1=CC=CC(=C1)O",
+        "Amarogentin phosphate": "OP(=O)(O)OC1=CC=CC(=C1)C(=O)OC1=CC=CC(=C1)O"
+      }
+    },
+    "Manjistha (Indian Madder)": {
+      "scientific_name": "Rubia cordifolia",
+      "phytochemical": "Munjistin",
+      "receptor_id": "2PRG",
+      "native_ligand_smiles": "OC1=CC2=C(C=C1O)C(=O)OC2=O",
+      "analogs": {
+        "O-Methyl Munjistin": "COC1=CC2=C(C=C1OC)C(=O)OC2=O",
+        "Fluoro Munjistin": "OC1=CC2=C(C=C1F)C(=O)OC2=O",
+        "Munjistin glucoside": "OC1=CC2=C(C=C1OC3OC(CO)C(O)C(O)C3O)C(=O)OC2=O",
+        "Munjistin amide": "OC1=CC2=C(C=C1O)C(N)=OC2=O",
+        "Munjistin phosphate": "OP(=O)(O)OC1=CC2=C(C=C1O)C(=O)OC2=O"
+      }
+    }
+  }
 }
