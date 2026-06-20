@@ -65,7 +65,8 @@ def initialize_session_states():
         "baseline_affinity": None, "baseline_pre_uff": "N/A", "baseline_post_uff": "N/A",
         "baseline_delta_uff": "N/A", "redesign_baseline_affinity": None,
         "selected_analog_smiles": None, "selected_analog_name": None, "active_synthesis_protocol": None,
-        "uff_cache": {}, "detected_pockets": [], "selected_tree_data": None
+        "uff_cache": {}, "detected_pockets": [], "selected_tree_data": None,
+        "active_retained_ions": "None"
     }
     for key, value in defaults.items():
         if key not in st.session_state: st.session_state[key] = value
@@ -77,68 +78,65 @@ def safe_rerun():
     except AttributeError: st.experimental_rerun()
 
 # =====================================================================
-# 2. NAMED REACTION SYNTHESIS ENGINE (Kürti & Czakó Mapping)
+# 2. NAMED REACTION SYNTHESIS ENGINE
 # =====================================================================
 SYNTHESIS_PROTOCOLS = {
     "methyl": {
         "reaction": "Williamson Ether Synthesis / O-Methylation",
-        "reference": "Kürti & Czakó, Strategic Applications of Named Reactions, p. 486",
+        "reference": "Strategic Applications of Named Reactions, p. 486",
         "reagents": "NaH (Sodium Hydride), MeI (Methyl Iodide) or Dimethyl Sulfate",
         "conditions": "Anhydrous DMF or THF, 0 °C warming to Room Temperature, 2-4 hours",
         "mechanism": "<strong>1. Deprotonation:</strong> The strong base (NaH) abstracts the acidic proton from the native phytochemical's hydroxyl/phenol group, generating a highly nucleophilic alkoxide/phenoxide anion and evolving hydrogen gas.<br><strong>2. S<sub>N</sub>2 Attack:</strong> The nucleophilic oxygen attacks the electrophilic carbon of Methyl Iodide in a concerted S<sub>N</sub>2 mechanism, displacing the iodide leaving group to forge the new stable ether (O-methyl) bond."
     },
     "acetyl": {
         "reaction": "Steglich Esterification / O-Acetylation",
-        "reference": "Kürti & Czakó, Strategic Applications of Named Reactions, p. 428",
+        "reference": "Strategic Applications of Named Reactions, p. 428",
         "reagents": "Acetic Anhydride, DMAP (Catalyst), Pyridine or Et3N",
         "conditions": "DCM (Dichloromethane), 0 °C, 1-3 hours",
         "mechanism": "<strong>1. Activation:</strong> DMAP acts as a hyper-nucleophilic catalyst, attacking acetic anhydride to form a highly reactive, resonance-stabilized acylpyridinium intermediate.<br><strong>2. Acyl Transfer:</strong> The native phytochemical's hydroxyl group attacks the acylpyridinium complex, facilitating rapid acyl transfer to form the acetate ester, regenerating the DMAP catalyst and releasing acetic acid as a byproduct."
     },
     "fluoro": {
         "reaction": "Electrophilic Aromatic Fluorination",
-        "reference": "Modern Synthetic Analog to Balz-Schiemann (Kürti & Czakó p. 32)",
+        "reference": "Modern Synthetic Analog to Balz-Schiemann, p. 32",
         "reagents": "Selectfluor (F-TEDA-BF4)",
         "conditions": "Acetonitrile (MeCN), Room Temperature or mild reflux",
         "mechanism": "<strong>1. S<sub>E</sub>Ar Attack:</strong> The electron-rich aromatic ring of the native phytochemical attacks the highly reactive, positively polarized fluorine atom of the Selectfluor reagent, generating a resonance-stabilized Wheland intermediate (sigma complex).<br><strong>2. Rearomatization:</strong> Rapid loss of a proton restores aromaticity, yielding the sterically conservative, metabolically stable fluoro-bioisostere."
     },
     "glucoside": {
         "reaction": "Koenigs-Knorr Glycosylation",
-        "reference": "Kürti & Czakó, Strategic Applications of Named Reactions, p. 244",
+        "reference": "Strategic Applications of Named Reactions, p. 244",
         "reagents": "Acetobromoglucose (Glycosyl donor), Ag2CO3 (Silver Carbonate promoter)",
         "conditions": "DCM, strictly anhydrous, protected from light, Room Temp",
         "mechanism": "<strong>1. Halophilic Activation:</strong> The Silver(I) salt acts as a halophilic promoter, coordinating with the bromide of the sugar donor. Precipitation of AgBr generates a highly reactive, transient oxocarbenium ion.<br><strong>2. Nucleophilic Trapping:</strong> The phytochemical's nucleophilic oxygen attacks the anomeric center of the oxocarbenium ion to establish the stereoselective beta-glycosidic linkage."
     },
     "amide": {
         "reaction": "Schotten-Baumann Reaction",
-        "reference": "Kürti & Czakó, Strategic Applications of Named Reactions, p. 400",
+        "reference": "Strategic Applications of Named Reactions, p. 400",
         "reagents": "Acyl Chloride or Acid Anhydride, Aqueous NaOH or Pyridine",
         "conditions": "Biphasic (Aqueous/Organic) mixture, rapid stirring, 0 °C",
         "mechanism": "<strong>1. Addition:</strong> The native phytochemical's amine nitrogen acts as a nucleophile, attacking the highly electrophilic carbonyl carbon of the acid chloride to form a tetrahedral intermediate.<br><strong>2. Elimination:</strong> The tetrahedral intermediate collapses, expelling the chloride leaving group. The base (NaOH or Pyridine) acts as an acid sponge, neutralizing the generated HCl to drive the stable amide bond formation to completion."
     },
     "epox": {
         "reaction": "Prilezhaev Reaction (Epoxidation)",
-        "reference": "Kürti & Czakó, Strategic Applications of Named Reactions, p. 364",
+        "reference": "Strategic Applications of Named Reactions, p. 364",
         "reagents": "mCPBA (meta-Chloroperoxybenzoic acid)",
         "conditions": "DCM (Dichloromethane), 0 °C, 2-6 hours",
-        "mechanism": "<strong>Concerted Transfer:</strong> The reaction proceeds via a highly ordered 'butterfly' transition state. The electrophilic oxygen of the peroxyacid is transferred synchronously to the electron-rich alkene $\pi$-bond of the native scaffold, yielding the oxirane (epoxide) ring while expelling m-chlorobenzoic acid as the byproduct."
+        "mechanism": "<strong>Concerted Transfer:</strong> The reaction proceeds via a highly ordered 'butterfly' transition state. The electrophilic oxygen of the peroxyacid is transferred synchronously to the electron-rich alkene &pi;-bond of the native scaffold, yielding the oxirane (epoxide) ring while expelling m-chlorobenzoic acid as the byproduct."
     }
 }
 
 def get_synthesis_protocol(analog_name):
     name_lower = analog_name.lower()
     for key, protocol in SYNTHESIS_PROTOCOLS.items():
-        if key in name_lower:
-            return protocol
+        if key in name_lower: return protocol
     return {
-        "reaction": "Standard Late-Stage Functionalization (LFS)",
-        "reference": "General Organic Synthesis Transformation",
-        "reagents": "Standard functional group transfer reagents",
-        "conditions": "Solvent-dependent, optimization required",
-        "mechanism": "Direct substitution or addition pathway utilizing the native phytochemical's most reactive steric and electronic nodes. Exact mechanistic pathway depends on target bioisosteric functional group topology."
+        "reaction": "Standard Late-Stage Functionalization (LFS)", "reference": "General Organic Synthesis Transformation",
+        "reagents": "Standard functional group transfer reagents", "conditions": "Solvent-dependent, optimization required",
+        "mechanism": "Direct substitution or addition pathway utilizing the native phytochemical's most reactive steric and electronic nodes."
     }
 
 # =====================================================================
-# 3. BIOINFORMATICS STRUCTURAL CONVERTERS & PARSERS (Truncated for brevity, kept essential functions)
+# 3. BIOINFORMATICS STRUCTURAL CONVERTERS & PARSERS
 # =====================================================================
 def fetch_pdb_from_rcsb(pdb_id):
     pdb_id = pdb_id.strip().lower()
@@ -160,7 +158,52 @@ def fetch_ligand_data_from_pubchem(smiles_string):
     except Exception: pass 
     return metadata
 
-def identify_protein_cavities(pdbqt_file):
+def discover_and_list_all_heteroatoms(file_path):
+    hetero_counts = {}
+    if not os.path.exists(file_path): return hetero_counts
+    with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+        for line in f:
+            if line.startswith("HETATM"):
+                res_name = line[17:20].strip()
+                if res_name in ["HOH", "WAT", "DOD"]: continue
+                hetero_counts[res_name] = hetero_counts.get(res_name, 0) + 1
+    return hetero_counts
+
+def parse_bound_ligands(file_path):
+    ligands = {}
+    if not os.path.exists(file_path): return []
+    with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+        for line in f:
+            if line.startswith("HETATM"):
+                res_name = line[17:20].strip()
+                chain_id = line[21].strip() if line[21].strip() else "A"
+                try: res_seq = int(line[22:26].strip())
+                except ValueError: continue
+                if res_name in ["HOH", "WAT", "DOD"]: continue
+                key = f"{res_name}-{chain_id}-{res_seq}"
+                try:
+                    x, y, z = float(line[30:38].strip()), float(line[38:46].strip()), float(line[46:54].strip())
+                except ValueError: continue
+                if key not in ligands:
+                    ligands[key] = {"res": res_name, "chain": chain_id, "seq": res_seq, "coords": []}
+                ligands[key]["coords"].append((x, y, z))
+    processed_ligands = []
+    for key, info in ligands.items():
+        pts = info["coords"]
+        n_atoms = len(pts)
+        if n_atoms < 4: continue
+        cx, cy, cz = sum([p[0] for p in pts])/n_atoms, sum([p[1] for p in pts])/n_atoms, sum([p[2] for p in pts])/n_atoms
+        bx = max([p[0] for p in pts]) - min([p[0] for p in pts]) + 10.0
+        by = max([p[1] for p in pts]) - min([p[1] for p in pts]) + 10.0
+        bz = max([p[2] for p in pts]) - min([p[2] for p in pts]) + 10.0
+        processed_ligands.append({
+            "ID": info["res"], "Chain": info["chain"], "ResSeq": info["seq"], "Atoms": n_atoms,
+            "cx": round(cx, 2), "cy": round(cy, 2), "cz": round(cz, 2),
+            "bx": min(126.0, round(bx, 1)), "by": min(126.0, round(by, 1)), "bz": min(126.0, round(bz, 1))
+        })
+    return processed_ligands
+
+def identify_protein_cavities(pdbqt_file, max_pockets=3):
     coords = []
     if not os.path.exists(pdbqt_file): return []
     with open(pdbqt_file, "r") as f:
@@ -198,26 +241,30 @@ def compute_protein_bounding_box(pdbqt_file):
     size = (max_c - min_c) + 15.0
     return center[0], center[1], center[2], min(126.0, size[0]), min(126.0, size[1]), min(126.0, size[2])
 
-def convert_pdb_to_pdbqt(input_pdb, output_pdbqt="protein.pdbqt", is_ligand=False):
+def convert_pdb_to_pdbqt(input_pdb, output_pdbqt="protein.pdbqt", is_ligand=False, allowed_heteroatoms=None):
+    if allowed_heteroatoms is None: allowed_heteroatoms = []
     temp_out = f"temp_{output_pdbqt}"
     try:
+        atom_count = 0
         with open(input_pdb, "r", encoding="utf-8", errors="ignore") as pdb, open(temp_out, "w", encoding="utf-8") as pdbqt:
             if is_ligand: pdbqt.write("ROOT\n")
             for line in pdb:
                 if line.startswith(("ATOM", "HETATM")):
                     rec = line[:6].strip()
-                    res = line[17:20].strip()
+                    res_name = line[17:20].strip()
+                    if rec == "HETATM" and not is_ligand and res_name not in allowed_heteroatoms: continue
                     try: x, y, z = float(line[30:38]), float(line[38:46]), float(line[46:54])
                     except: continue
                     element = line[76:78].strip()
                     if not element: element = "C"
                     vina_type = element.title()
                     if element == "C" and "AR" in line[12:16].upper(): vina_type = "A"
-                    pdbqt.write(f"{rec:<6}    1  C   {res:>3} A   1    {x:>8.3f}{y:>8.3f}{z:>8.3f}  1.00  0.00    +0.000 {vina_type:<2}\n")
+                    pdbqt.write(f"{rec:<6}    1  C   {res_name:>3} A   1    {x:>8.3f}{y:>8.3f}{z:>8.3f}  1.00  0.00    +0.000 {vina_type:<2}\n")
+                    atom_count += 1
             if is_ligand: pdbqt.write("ENDROOT\nTORSDOF 4\n")
             else: pdbqt.write("ENDMDL\n")
         shutil.move(temp_out, output_pdbqt)
-        return True, output_pdbqt
+        return atom_count > 0, output_pdbqt
     except Exception as e: return False, str(e)
 
 def convert_smiles_to_pdbqt(smiles_string, output_filename="ligand.pdbqt"):
@@ -282,6 +329,10 @@ def generate_clean_2d_image(smiles_str, zoom_level=450):
     return None
 
 def render_advanced_modeling_blueprint(receptor_data, ligand_data, unique_id="container"):
+    # Ensure raw PDB string does not break JS syntax
+    safe_rec = str(receptor_data).replace('`', '').replace('\\', '\\\\')
+    safe_lig = str(ligand_data).replace('`', '').replace('\\', '\\\\')
+    
     html_content = f"""
     <div id="wrapper_{unique_id}" style="width:100%;">
         <div id="{unique_id}" style="height: 480px; width: 100%; border-radius:10px; border:1px solid #eaeaea; background:#ffffff;"></div>
@@ -289,12 +340,12 @@ def render_advanced_modeling_blueprint(receptor_data, ligand_data, unique_id="co
     <script src="https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.0.4/3Dmol-min.js"></script>
     <script>
         let viewer_{unique_id} = $3Dmol.createViewer(document.getElementById('{unique_id}'), {{backgroundColor: '#ffffff'}});
-        if (`{receptor_data}`.trim().length > 0) {{
-            viewer_{unique_id}.addModel(`{receptor_data}`, 'pdb');
+        if (`{safe_rec}`.trim().length > 0) {{
+            viewer_{unique_id}.addModel(`{safe_rec}`, 'pdb');
             viewer_{unique_id}.setStyle({{model: 0}}, {{cartoon: {{colorscheme: 'chain', style: 'oval', thickness: 0.6}}}});
         }}
-        if (`{ligand_data}`.trim().length > 0) {{
-            viewer_{unique_id}.addModel(`{ligand_data}`, 'pdb');
+        if (`{safe_lig}`.trim().length > 0) {{
+            viewer_{unique_id}.addModel(`{safe_lig}`, 'pdb');
             viewer_{unique_id}.setStyle({{model: 1}}, {{stick: {{colorscheme: 'greenCarbon', radius: 0.28}}}});
         }}
         viewer_{unique_id}.zoomTo(); viewer_{unique_id}.render();
@@ -317,10 +368,9 @@ def generate_ayurvedic_card(data):
     """
 
 def build_comprehensive_html_report(meta, adme_p, adme_v, analog_name, analog_smiles, p_2d, v_2d, orig_aff, new_aff, syn_protocol):
-    
     synthesis_html_block = f"""
     <div style="background-color:#f8fafc; border-left: 5px solid #0369a1; padding:20px; border-radius:6px; margin:20px 0;">
-        <h3 style="color:#0369a1; margin-top:0;">Laboratory Synthesis Blueprint (Kürti & Czakó Mapping)</h3>
+        <h3 style="color:#0369a1; margin-top:0;">Laboratory Synthesis Blueprint</h3>
         <p><strong>Identified Transformation / Named Reaction:</strong> {syn_protocol['reaction']}</p>
         <p><strong>Literature Reference:</strong> <i>{syn_protocol['reference']}</i></p>
         <p><strong>Standard Laboratory Reagents:</strong> {syn_protocol['reagents']}</p>
@@ -436,13 +486,58 @@ with col_params:
     if st.session_state.get('selected_tree_data'):
         st.markdown(generate_ayurvedic_card(st.session_state.selected_tree_data), unsafe_allow_html=True)
 
-    st.subheader("Smart Cavity Configurator")
-    if st.button("🌐 Enable Blind Docking (Full Protein Surface)", use_container_width=True):
-        if st.session_state.target_ready and os.path.exists("protein.pdbqt"):
+    # --- HETEROATOM & CAVITY SEARCH LOGIC ---
+    if st.session_state.target_ready and st.session_state.local_target_path:
+        st.subheader("Target Preparations")
+        
+        # Heteroatoms
+        discovered_het = discover_and_list_all_heteroatoms(st.session_state.local_target_path)
+        if discovered_het:
+            st.markdown("**🧬 Catalytic Cofactors & Heteroatom Filter**")
+            selected_hets = []
+            cols_het = st.columns(min(len(discovered_het), 4))
+            for idx, (het_id, count) in enumerate(discovered_het.items()):
+                with cols_het[idx % 4]:
+                    if st.checkbox(f"Keep {het_id} ({count})", value=False, key=f"keep_het_{het_id}"):
+                        selected_hets.append(het_id)
+            if st.button("🛠 Rebuild Clean Receptor Structure"):
+                ok, err = convert_pdb_to_pdbqt(st.session_state.local_target_path, "protein.pdbqt", is_ligand=False, allowed_heteroatoms=selected_hets)
+                if ok:
+                    st.session_state.active_retained_ions = ", ".join(selected_hets) if selected_hets else "None"
+                    st.success("Receptor rebuilt successfully!")
+                    trigger_rerun = True
+
+        st.markdown("**Smart Cavity & Bound Ligand Configurator**")
+        if st.button("🌐 Enable Blind Docking (Full Surface)"):
             c_x, c_y, c_z, s_x, s_y, s_z = compute_protein_bounding_box("protein.pdbqt")
             st.session_state.cx, st.session_state.cy, st.session_state.cz = round(c_x,1), round(c_y,1), round(c_z,1)
             st.session_state.sx, st.session_state.sy, st.session_state.sz = int(s_x), int(s_y), int(s_z)
             trigger_rerun = True
+
+        if st.button("🔍 Scan Surface for Binding Cavities"):
+            pockets = identify_protein_cavities("protein.pdbqt")
+            if pockets:
+                st.session_state.detected_pockets = pockets
+                st.success("Cavities mapped successfully!")
+
+        if st.session_state.detected_pockets:
+            p_opts = st.session_state.detected_pockets
+            selected_p_idx = st.selectbox("Select Scanned Cavity:", options=range(len(p_opts)), format_func=lambda idx: f"{p_opts[idx]['Pocket_ID']} (Density Score: {p_opts[idx]['Score']})")
+            if st.button("🎯 Lock Grid to Cavity"):
+                chosen_p = p_opts[selected_p_idx]
+                st.session_state.cx, st.session_state.cy, st.session_state.cz = chosen_p["cx"], chosen_p["cy"], chosen_p["cz"]
+                st.session_state.sx, st.session_state.sy, st.session_state.sz = int(chosen_p["bx"]), int(chosen_p["by"]), int(chosen_p["bz"])
+                trigger_rerun = True
+                
+        # Bound Ligands
+        bound_ligands_list = parse_bound_ligands(st.session_state.local_target_path)
+        if bound_ligands_list:
+            selected_lig_id = st.selectbox("Lock grid box to native Co-Crystal Ligand site:", options=range(len(bound_ligands_list)), format_func=lambda idx: f"{bound_ligands_list[idx]['ID']} (Chain {bound_ligands_list[idx]['Chain']})")
+            if st.button("🎯 Lock Grid to Native Site"):
+                chosen_target = bound_ligands_list[selected_lig_id]
+                st.session_state.cx, st.session_state.cy, st.session_state.cz = chosen_target["cx"], chosen_target["cy"], chosen_target["cz"]
+                st.session_state.sx, st.session_state.sy, st.session_state.sz = int(chosen_target["bx"]), int(chosen_target["by"]), int(chosen_target["bz"])
+                trigger_rerun = True
 
     grid_cx = st.number_input("Center X", value=float(st.session_state.cx), step=1.0)
     grid_cy = st.number_input("Center Y", value=float(st.session_state.cy), step=1.0)
@@ -456,31 +551,40 @@ with col_params:
 
 with col_visual:
     st.header("Active Viewport Canvas")
-    if st.session_state.docking_results_raw is None:
-        rec_view = ""
-        if st.session_state.target_ready and os.path.exists("protein.pdbqt"):
-            with open("protein.pdbqt", "r") as f: rec_view = f.read()
-        render_advanced_modeling_blueprint(rec_view, st.session_state.serialized_ligand_block, unique_id="v_phase1")
-    else:
-        st.subheader("Baseline Docking Results")
-        if os.path.exists("docking_poses.pdbqt"):
-            poses = split_docking_poses("docking_poses.pdbqt")
-            if poses:
-                aff = get_pose_affinity(st.session_state.docking_results_raw, 1)
-                st.session_state.baseline_affinity = aff
-                
-                try:
-                    if float(aff) > 0: st.error("🚨 **WARNING:** Positive binding energy detected. Molecule is experiencing steric clashes. Expand the Grid Box.")
-                except: pass
+    view_tabs = st.tabs(["3D Receptor & Grid", "2D Native Ligand Conformer"])
+    
+    with view_tabs[1]:
+        if st.session_state.smiles_cache:
+            img_html = generate_clean_2d_image(st.session_state.smiles_cache, zoom_level=500)
+            if img_html: st.markdown(img_html, unsafe_allow_html=True)
+            else: st.info("Load Ligand to view structure.")
 
-                st.html(f"""
-                <div style="background-color:#f0f7f4; border-left:6px solid #2e7d32; padding:16px; border-radius:8px; margin-bottom:15px;">
-                    <span style="font-size:12px; color:#555; text-transform:uppercase; font-weight:bold;">Baseline Pose Affinity</span><br>
-                    <span style="font-size:36px; font-weight:900; color:#1b5e20;">{aff} <span style="font-size:18px; font-weight:normal;">kcal/mol</span></span>
-                </div>
-                """)
-                with open("protein.pdbqt", "r") as f: p_data = f.read()
-                render_advanced_modeling_blueprint(p_data, poses[1], unique_id="p1_res")
+    with view_tabs[0]:
+        if st.session_state.docking_results_raw is None:
+            rec_view = ""
+            if st.session_state.target_ready and os.path.exists("protein.pdbqt"):
+                with open("protein.pdbqt", "r") as f: rec_view = f.read()
+            render_advanced_modeling_blueprint(rec_view, st.session_state.serialized_ligand_block, unique_id="v_phase1")
+        else:
+            st.subheader("Baseline Docking Results")
+            if os.path.exists("docking_poses.pdbqt"):
+                poses = split_docking_poses("docking_poses.pdbqt")
+                if poses:
+                    aff = get_pose_affinity(st.session_state.docking_results_raw, 1)
+                    st.session_state.baseline_affinity = aff
+                    
+                    try:
+                        if float(aff) > 0: st.error("🚨 **WARNING:** Positive binding energy detected. Expand the Grid Box.")
+                    except: pass
+
+                    st.html(f"""
+                    <div style="background-color:#f0f7f4; border-left:6px solid #2e7d32; padding:16px; border-radius:8px; margin-bottom:15px;">
+                        <span style="font-size:12px; color:#555; text-transform:uppercase; font-weight:bold;">Baseline Pose Affinity</span><br>
+                        <span style="font-size:36px; font-weight:900; color:#1b5e20;">{aff} <span style="font-size:18px; font-weight:normal;">kcal/mol</span></span>
+                    </div>
+                    """)
+                    with open("protein.pdbqt", "r") as f: p_data = f.read()
+                    render_advanced_modeling_blueprint(p_data, poses[1], unique_id="p1_res")
 
 if run_btn and can_dock:
     vina_path = os.path.abspath("vina")
@@ -522,17 +626,17 @@ if st.session_state.get('selected_tree_data'):
             st.session_state.selected_analog_smiles = analogs[sel_analog]
             st.success(f"Analog Locked: {sel_analog}")
             
-            # --- NEW: NAMED REACTION INJECTION (Kürti & Czakó) ---
+            # --- FIXED TEXT VISIBILITY FOR SYNTHESIS PROTOCOL ---
             syn_protocol = get_synthesis_protocol(sel_analog)
             st.session_state.active_synthesis_protocol = syn_protocol
             
             st.markdown(f"""
             <div style="background-color:#f8fafc; border-left: 5px solid #0369a1; padding:20px; border-radius:6px; margin-top:20px;">
                 <h4 style="color:#0369a1; margin-top:0;">🧪 Laboratory Synthesis Protocol</h4>
-                <p><strong>Identified Named Reaction:</strong> {syn_protocol['reaction']}</p>
-                <p><strong>Textbook Ref:</strong> <i>{syn_protocol['reference']}</i></p>
-                <p><strong>Reagents:</strong> {syn_protocol['reagents']}</p>
-                <p><strong>Conditions:</strong> {syn_protocol['conditions']}</p>
+                <p style="color:#334155;"><strong>Identified Named Reaction:</strong> {syn_protocol['reaction']}</p>
+                <p style="color:#334155;"><strong>Textbook Ref:</strong> <i>{syn_protocol['reference']}</i></p>
+                <p style="color:#334155;"><strong>Reagents:</strong> {syn_protocol['reagents']}</p>
+                <p style="color:#334155;"><strong>Conditions:</strong> {syn_protocol['conditions']}</p>
                 <hr style="border:0; border-top:1px solid #cbd5e1; margin:10px 0;">
                 <p style="font-size:14px; color:#475569;"><strong>Reaction Mechanism:</strong><br>{syn_protocol['mechanism']}</p>
             </div>
@@ -543,7 +647,7 @@ if st.session_state.get('selected_tree_data'):
             img_html = generate_clean_2d_image(st.session_state.selected_analog_smiles, zoom_level=500)
             if img_html: st.markdown(img_html, unsafe_allow_html=True)
 else:
-    st.warning("Select a target in Phase 1.")
+    st.warning("Select a target in Phase 1 to unlock Redesign Phase.")
 
 # --- PHASE 3 & 4: ADME & VALIDATION ---
 st.write("---")
