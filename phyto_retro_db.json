@@ -1,0 +1,136 @@
+{
+    "🔴 Anticancer": {
+        "Haridra (Turmeric)": {
+            "scientific_name": "Curcuma longa",
+            "phytochemical": "Curcumin",
+            "receptor_id": "1M17",
+            "native_ligand_smiles": "COC1=C(C=CC(=C1)C=CC(=O)CC(=O)C=CC2=CC(=C(C=C2)O)OC)O",
+            "analogs": {
+                "Di-O-methyl Curcumin": "COC1=C(C=CC(=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC(=C(C=C2)OC)OC)OC",
+                "2'-Fluoro Curcumin": "COC1=C(C=CC(=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC(=C(C=C2F)O)OC)O",
+                "Tetrahydrocurcumin": "COC1=C(CCCC(=O)CC(=O)CCC2=CC(=C(C=C2)O)OC)O",
+                "Curcumin-piperazine amide": "COC1=C(C=CC(=C1)/C=C/C(=O)CN1CCNCC1)/C=C/C2=CC(=C(C=C2)O)OC",
+                "Curcumin-boron complex": "B1(OC(=O)/C=C/C2=CC(=C(C=C2)O)OC)OC(=O)/C=C/C3=CC(=C(C=C3)O)OC1"
+            }
+        },
+        "Ashwagandha": {
+            "scientific_name": "Withania somnifera",
+            "phytochemical": "Withaferin A",
+            "receptor_id": "6Y6G",
+            "native_ligand_smiles": "CC1=C(C(=O)OC(C1)C(C)C2CCC3C2(CCC4C3CC5C6(C4(C(=O)C=CC6O)C)O5)C)CO",
+            "analogs": {
+                "4-Methoxy Withaferin A": "CC1(C(=O)C=CC2(C1CC3C4(C2CC(C4=O)O)C)C)OC",
+                "4-Azido Withaferin A": "CC1(C(=O)C=CC2(C1CC3C4(C2CC(C4=O)O)C)C)N=[N+]=[N-]",
+                "Withaferin A-ethanolamine": "CC1(C(=O)C=CC2(C1CC3C4(C2CC(C4=O)NCCO)C)C)O",
+                "6-Fluoro Withaferin A": "CC1(C(=O)C=CC2(C1CC3C4(C2CC(C4=O)F)C)C)O",
+                "Withaferin A-glucoside": "CC1(C(=O)C=CC2(C1CC3C4(C2CC(C4=O)OC5OC(CO)C(O)C(O)C5O)C)C)O"
+            }
+        },
+        "Guduchi": {
+            "scientific_name": "Tinospora cordifolia",
+            "phytochemical": "Berberine",
+            "receptor_id": "4FM9",
+            "native_ligand_smiles": "COC1=C(C2=C[N+]3=C(C=C2C=C1)C4=CC5=C(C=C4CC3)OCO5)OC",
+            "analogs": {
+                "N-Propargyl Berberine": "COC1=C(C2=C[N+]3(CC#C)=C(C=C2C=C1)C4=CC5=C(C=C4CC3)OCO5)OC",
+                "9-Hydroxyberberine": "COC1=C(C2=C[N+]3=C(C=C2C=C1)C4=CC5=C(C=C4CC3)OCO5)O",
+                "13-Fluoroberberine": "COC1=C(C2=C[N+]3=C(C=C2C=C1)C4=CC5=C(C=C4CC3F)OCO5)OC",
+                "Difluoro Berberine": "COC1=C(C2=C[N+]3=C(C=C2C=C1)C4=CC5=C(C=C4CC3)C(F)(F)O5)OC",
+                "N-Benzyl Berberine salt": "COC1=C(C2=C[N+]3(Cc4ccccc4)=C(C=C2C=C1)C4=CC5=C(C=C4CC3)OCO5)OC.[Br-]"
+            }
+        },
+        "Tulsi (Holy Basil)": {
+            "scientific_name": "Ocimum sanctum",
+            "phytochemical": "Eugenol",
+            "receptor_id": "1NME",
+            "native_ligand_smiles": "COC1=C(C=CC(=C1)CC=C)O",
+            "analogs": {
+                "Isoeugenol epoxide": "C1OC1Cc1ccc(O)c(OC)c1",
+                "Eugenol acetate": "C=CCc1ccc(OC(C)=O)c(OC)c1",
+                "O-Ethyl Eugenol": "C=CCc1ccc(O)c(OCC)c1",
+                "Propargyl Eugenol": "C#CCc1ccc(O)c(OC)c1",
+                "4-Nitro Eugenol": "C=CCc1cc([N+](=O)[O-])c(OC)c(O)c1"
+            }
+        },
+        "Nimba (Neem)": {
+            "scientific_name": "Azadirachta indica",
+            "phytochemical": "Nimbin",
+            "receptor_id": "3V2A",
+            "native_ligand_smiles": "CC1=C2C(CC1C3=COC=C3)OC4C2(C(C5(C(C4OC(=O)C)C(C=CC5=O)(C)C(=O)OC)C)CC(=O)OC)C",
+            "analogs": {
+                "Nimbin amide": "CC1(C(=O)N)CCC2=C(C1)C(=O)C1=C(C2=O)C(OC(C)=O)=CC=C1",
+                "3-Fluoro Nimbin": "CC1(C(=O)OC)CCC2=C(C1F)C(=O)C1=C(C2=O)C(OC(C)=O)=CC=C1",
+                "Deacetyl Nimbin": "CC1(C(=O)OC)CCC2=C(C1)C(=O)C1=C(C2=O)C(O)=CC=C1",
+                "Ethyl Nimbin": "CC1(C(=O)OCC)CCC2=C(C1)C(=O)C1=C(C2=O)C(OC(C)=O)=CC=C1",
+                "Sulfonyl Nimbin": "CC1(C(=O)OC)CCC2=C(C1)C(=O)C1=C(C2=O)C(OS(=O)(=O)C)=CC=C1"
+            }
+        }
+    },
+    "🟢 Antidiabetic": {
+        "Haridra (Turmeric)": {
+            "scientific_name": "Curcuma longa",
+            "phytochemical": "Bisdemethoxycurcumin",
+            "receptor_id": "3WY1",
+            "native_ligand_smiles": "OC1=CC(=CC=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC=C(O)C=C2",
+            "analogs": {
+                "Dimethoxy Bisdemethoxycurcumin": "COC1=CC(=CC=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC=C(OC)C=C2",
+                "3-Fluoro Bisdemethoxycurcumin": "OC1=CC(=CC=C1F)/C=C/C(=O)CC(=O)/C=C/C2=CC=C(O)C=C2",
+                "Bisdemethoxycurcumin glucoside": "OC1=CC(=CC=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC=C(OC3OC(CO)C(O)C(O)C3O)C=C2",
+                "Hexahydrobisdemethoxycurcumin": "OC1=CC(=CC=C1)CCC(=O)CC(=O)CCC2=CC=C(O)C=C2",
+                "Bisdemethoxycurcumin sulfonate": "OS(=O)(=O)OC1=CC(=CC=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC=C(OS(=O)(=O)O)C=C2"
+            }
+        },
+        "Ashwagandha": {
+            "scientific_name": "Withania somnifera",
+            "phytochemical": "Withanolide D",
+            "receptor_id": "2PRG",
+            "native_ligand_smiles": "CC1(C(=O)C=CC2(C)CCC3C4(CC(O)C(=O)C4(C)CCC3C12)O)O",
+            "analogs": {
+                "4-Methoxy Withanolide D": "CC1(C(=O)C=CC2(C)CCC3C4(CC(O)C(=O)C4(C)CCC3C12)O)OC",
+                "Fluoro Withanolide D": "CC1(C(=O)C=CC2(C)CCC3C4(CC(F)C(=O)C4(C)CCC3C12)O)O",
+                "Withanolide D glucoside": "CC1(C(=O)C=CC2(C)CCC3C4(CC(OC5OC(CO)C(O)C(O)C5O)C(=O)C4(C)CCC3C12)O)O",
+                "2,3-Epoxy Withanolide D": "CC1(C(=O)C=CC2(C)CCC3C4(CC(O)C(=O)C4(C)CCC3C12)O)O",
+                "3-Amino Withanolide D": "CC1(C(=O)C=CC2(C)CCC3C4(CC(N)C(=O)C4(C)CCC3C12)O)O"
+            }
+        },
+        "Guduchi": {
+            "scientific_name": "Tinospora cordifolia",
+            "phytochemical": "Tinosporaside",
+            "receptor_id": "5NN5",
+            "native_ligand_smiles": "OCC1OC(Oc2ccc3c(c2)CC(=O)O3)C(O)C(O)C1O",
+            "analogs": {
+                "Acetyl Tinosporaside": "OCC1OC(Oc2ccc3c(c2)CC(=O)O3)C(OC(C)=O)C(O)C1O",
+                "2'-Fluoro Tinosporaside": "OCC1OC(Oc2ccc3c(c2)CC(=O)O3)C(F)C(O)C1O",
+                "Methyl ester Tinosporaside": "OCC1OC(Oc2ccc3c(c2)CC(=O)OC3)C(O)C(O)C1O",
+                "Hydroxy Tinosporaside": "OCC1OC(Oc2ccc3c(c2O)CC(=O)O3)C(O)C(O)C1O",
+                "Deoxy Tinosporaside": "OCC1OC(Oc2ccc3c(c2)CC(=O)O3)CC(O)C1O"
+            }
+        },
+        "Tulsi (Holy Basil)": {
+            "scientific_name": "Ocimum sanctum",
+            "phytochemical": "Ursolic acid",
+            "receptor_id": "1IRK",
+            "native_ligand_smiles": "CC1CCC2(CCC3(C(=CCC4C3(CCC5C4(CCC(C5(C)C)O)C)C)C2C1C)C)C(=O)O",
+            "analogs": {
+                "3-Acetyl Ursolic acid": "CC1CCC2(CCC3(C)C(CCC4C3(CCC(=C4)C(=O)O)C)C2C1OC(C)=O)C(=O)O",
+                "Ursolic acid amide": "CC1CCC2(CCC3(C)C(CCC4C3(CCC(=C4)C(N)=O)C)C2C1O)C(N)=O",
+                "3-Amino Ursolic acid": "CC1CCC2(CCC3(C)C(CCC4C3(CCC(=C4)C(=O)O)C)C2C1N)C(=O)O",
+                "12-Fluoro Ursolic acid": "CC1CCC2(CCC3(C)C(CCC4C3(CCC(=C4F)C(=O)O)C)C2C1O)C(=O)O",
+                "Ursolic acid-3-glucoside": "CC1CCC2(CCC3(C)C(CCC4C3(CCC(=C4)C(=O)O)C)C2C1OC5OC(CO)C(O)C(O)C5O)C(=O)O"
+            }
+        },
+        "Nimba (Neem)": {
+            "scientific_name": "Azadirachta indica",
+            "phytochemical": "Gedunin",
+            "receptor_id": "1V4S",
+            "native_ligand_smiles": "CC(=O)OC1CC2C(C(=O)C=CC2(C3C1(C45C(O4)C(=O)OC(C5(CC3)C)C6=COC=C6)C)C)(C)C",
+            "analogs": {
+                "Azido Gedunin": "N/A",
+                "Fluoro Gedunin": "N/A",
+                "7-Acetyl Gedunin": "N/A",
+                "Dihydro Gedunin": "N/A",
+                "Gedunin glucoside": "N/A"
+            }
+        }
+    }
+}
